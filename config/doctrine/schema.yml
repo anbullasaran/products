@@ -1,0 +1,58 @@
+ProductCategory:
+  actAs: { Timestampable: ~ }
+  columns:
+    category_name: { type: string(255), notnull: true, unique: true }
+    
+Product:
+  actAs: { Timestampable: ~ }
+  columns:
+    category_id:  { type: integer, notnull: true }
+    product_name: { type: string(255) }   
+    product_key:  { type: string(255) }   
+    unit_price:   { type: integer }  
+    description:  { type: string(4000), notnull: true }     
+  relations:
+    ProductCategory:
+      class: ProductCategory
+      local: category_id
+      foreign: id
+      type: one
+      foreignType: many
+      foreignAlias: Product
+      onDelete: CASCADE
+    
+Customers:
+  actAs: { Timestampable: ~ }
+  columns:    
+    customer_name: { type: string(255) }   
+    customer_type: { type: string(255) }   
+    location:      { type: string(255) }
+    contact_addr:  { type: string(4000) } 
+    email:         { type: string(255), unique: true }
+    phone_number:  { type: string(255)}
+ 
+orders:
+  columns:
+    product_id:  { type: integer, primary: true }
+    customer_id: { type: integer, primary: true }
+  relations:
+    Product:
+      class: Product
+      local: product_id
+      foreign: id
+      type: one
+      foreignType: many
+      foreignAlias: orders1
+      onDelete: CASCADE
+    Customers:
+      class: Customers
+      local: customer_id
+      foreign: id
+      type: many
+      foreignType: one
+      foreignAlias: orders2
+      onDelete: CASCADE
+  
+
+    
+    
