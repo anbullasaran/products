@@ -13,4 +13,12 @@ require_once dirname(__FILE__).'/../lib/ordersGeneratorHelper.class.php';
  */
 class ordersActions extends autoOrdersActions
 {
+  
+  public function executeNew(sfWebRequest $request)
+  {
+     
+    //$this->count = $this->getCount();
+    $this->form = $this->configuration->getForm();
+    $this->orders = $this->form->getObject();
+  }
 }
