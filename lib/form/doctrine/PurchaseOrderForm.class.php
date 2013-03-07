@@ -12,5 +12,7 @@ class PurchaseOrderForm extends BasePurchaseOrderForm
 {
   public function configure()
   {
+      $this->widgetSchema['product_id']->setOption('add_empty',false);
+      $this->widgetSchema['customer_id']->setOption('add_empty',false);
   }
 }

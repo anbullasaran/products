@@ -14,7 +14,14 @@ generator:
     config:
       actions: ~
       fields:  ~
-      list:    ~
+      list:    
+        display: [id,product_name,product_key,unit_price,description]
+        batch_actions: []
+#        actions: []
+#        object_actions:
+#          users: ~
+#          _edit:      ~
+#          _delete:    ~
       filter:  ~
       form:    ~
       edit:    ~

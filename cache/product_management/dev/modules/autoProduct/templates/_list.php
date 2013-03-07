@@ -5,14 +5,13 @@
     <table cellspacing="0">
       <thead>
         <tr>
-          <th id="sf_admin_list_batch_actions"><input id="sf_admin_list_batch_checkbox" type="checkbox" onclick="checkAll();" /></th>
           <?php include_partial('product/list_th_tabular', array('sort' => $sort)) ?>
           <th id="sf_admin_list_th_actions"><?php echo __('Actions', array(), 'sf_admin') ?></th>
         </tr>
       </thead>
       <tfoot>
         <tr>
-          <th colspan="10">
+          <th colspan="6">
             <?php if ($pager->haveToPaginate()): ?>
               <?php include_partial('product/pagination', array('pager' => $pager)) ?>
             <?php endif; ?>
@@ -27,7 +26,6 @@
       <tbody>
         <?php foreach ($pager->getResults() as $i => $product): $odd = fmod(++$i, 2) ? 'odd' : 'even' ?>
           <tr class="sf_admin_row <?php echo $odd ?>">
-            <?php include_partial('product/list_td_batch_actions', array('product' => $product, 'helper' => $helper)) ?>
             <?php include_partial('product/list_td_tabular', array('product' => $product)) ?>
             <?php include_partial('product/list_td_actions', array('product' => $product, 'helper' => $helper)) ?>
           </tr>

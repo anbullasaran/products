@@ -1,3 +1,3 @@
-<td colspan="8">
-  <?php echo __('%%id%% - %%category_id%% - %%product_name%% - %%product_key%% - %%unit_price%% - %%description%% - %%created_at%% - %%updated_at%%', array('%%id%%' => link_to($product->getId(), 'product_edit', $product), '%%category_id%%' => $product->getCategoryId(), '%%product_name%%' => $product->getProductName(), '%%product_key%%' => $product->getProductKey(), '%%unit_price%%' => $product->getUnitPrice(), '%%description%%' => $product->getDescription(), '%%created_at%%' => false !== strtotime($product->getCreatedAt()) ? format_date($product->getCreatedAt(), "f") : '&nbsp;', '%%updated_at%%' => false !== strtotime($product->getUpdatedAt()) ? format_date($product->getUpdatedAt(), "f") : '&nbsp;'), 'messages') ?>
+<td colspan="5">
+  <?php echo __('%%id%% - %%product_name%% - %%product_key%% - %%unit_price%% - %%description%%', array('%%id%%' => link_to($product->getId(), 'product_edit', $product), '%%product_name%%' => $product->getProductName(), '%%product_key%%' => $product->getProductKey(), '%%unit_price%%' => $product->getUnitPrice(), '%%description%%' => $product->getDescription()), 'messages') ?>
 </td>

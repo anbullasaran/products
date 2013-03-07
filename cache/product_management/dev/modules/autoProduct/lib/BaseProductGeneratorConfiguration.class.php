@@ -42,12 +42,12 @@ abstract class BaseProductGeneratorConfiguration extends sfModelGeneratorConfigu
 
   public function getListBatchActions()
   {
-    return array(  '_delete' => NULL,);
+    return array();
   }
 
   public function getListParams()
   {
-    return '%%id%% - %%category_id%% - %%product_name%% - %%product_key%% - %%unit_price%% - %%description%% - %%created_at%% - %%updated_at%%';
+    return '%%id%% - %%product_name%% - %%product_key%% - %%unit_price%% - %%description%%';
   }
 
   public function getListLayout()
@@ -92,7 +92,7 @@ abstract class BaseProductGeneratorConfiguration extends sfModelGeneratorConfigu
 
   public function getListDisplay()
   {
-    return array(  0 => 'id',  1 => 'category_id',  2 => 'product_name',  3 => 'product_key',  4 => 'unit_price',  5 => 'description',  6 => 'created_at',  7 => 'updated_at',);
+    return array(  0 => 'id',  1 => 'product_name',  2 => 'product_key',  3 => 'unit_price',  4 => 'description',);
   }
 
   public function getFieldsDefault()
