@@ -12,5 +12,6 @@ class ProductCategoryForm extends BaseProductCategoryForm
 {
   public function configure()
   {
+      unset($this['created_at'],$this['updated_at']);
   }
 }

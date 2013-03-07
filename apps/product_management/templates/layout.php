@@ -23,7 +23,7 @@
             <?php echo link_to('customers', 'customers') ?> &nbsp;
             <?php echo link_to('category', 'product_category') ?> &nbsp;       
             <?php echo link_to('product', 'product') ?>&nbsp;
-            <?php echo link_to('orders', 'orders') ?>
+            <?php echo link_to('PurchaseOrder', 'purchase_order') ?>
           </li>
         </ul>
       </div>

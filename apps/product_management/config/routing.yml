@@ -25,15 +25,6 @@ purchase_order:
     column:               id
     with_wildcard_routes: true
 
-orders:
-  class: sfDoctrineRouteCollection
-  options:
-    model:                orders
-    module:               orders
-    prefix_path:          /orders
-    column:               Array
-    with_wildcard_routes: true
-
 product:
   class: sfDoctrineRouteCollection
   options:
