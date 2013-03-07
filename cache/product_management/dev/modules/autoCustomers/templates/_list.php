@@ -25,11 +25,11 @@
         </tr>
       </tfoot>
       <tbody>
-        <?php foreach ($pager->getResults() as $i => $customers): $odd = fmod(++$i, 2) ? 'odd' : 'even' ?>
+        <?php foreach ($pager->getResults() as $i => $customer): $odd = fmod(++$i, 2) ? 'odd' : 'even' ?>
           <tr class="sf_admin_row <?php echo $odd ?>">
-            <?php include_partial('customers/list_td_batch_actions', array('customers' => $customers, 'helper' => $helper)) ?>
-            <?php include_partial('customers/list_td_tabular', array('customers' => $customers)) ?>
-            <?php include_partial('customers/list_td_actions', array('customers' => $customers, 'helper' => $helper)) ?>
+            <?php include_partial('customers/list_td_batch_actions', array('customer' => $customer, 'helper' => $helper)) ?>
+            <?php include_partial('customers/list_td_tabular', array('customer' => $customer)) ?>
+            <?php include_partial('customers/list_td_actions', array('customer' => $customer, 'helper' => $helper)) ?>
           </tr>
         <?php endforeach; ?>
       </tbody>

@@ -1,27 +1,27 @@
 <td class="sf_admin_text sf_admin_list_td_id">
-  <?php echo link_to($customers->getId(), 'customers_edit', $customers) ?>
+  <?php echo link_to($customer->getId(), 'customer_edit', $customer) ?>
 </td>
 <td class="sf_admin_text sf_admin_list_td_customer_name">
-  <?php echo $customers->getCustomerName() ?>
+  <?php echo $customer->getCustomerName() ?>
 </td>
 <td class="sf_admin_text sf_admin_list_td_customer_type">
-  <?php echo $customers->getCustomerType() ?>
+  <?php echo $customer->getCustomerType() ?>
 </td>
 <td class="sf_admin_text sf_admin_list_td_location">
-  <?php echo $customers->getLocation() ?>
+  <?php echo $customer->getLocation() ?>
 </td>
 <td class="sf_admin_text sf_admin_list_td_contact_addr">
-  <?php echo $customers->getContactAddr() ?>
+  <?php echo $customer->getContactAddr() ?>
 </td>
 <td class="sf_admin_text sf_admin_list_td_email">
-  <?php echo $customers->getEmail() ?>
+  <?php echo $customer->getEmail() ?>
 </td>
 <td class="sf_admin_text sf_admin_list_td_phone_number">
-  <?php echo $customers->getPhoneNumber() ?>
+  <?php echo $customer->getPhoneNumber() ?>
 </td>
 <td class="sf_admin_date sf_admin_list_td_created_at">
-  <?php echo false !== strtotime($customers->getCreatedAt()) ? format_date($customers->getCreatedAt(), "f") : '&nbsp;' ?>
+  <?php echo false !== strtotime($customer->getCreatedAt()) ? format_date($customer->getCreatedAt(), "f") : '&nbsp;' ?>
 </td>
 <td class="sf_admin_date sf_admin_list_td_updated_at">
-  <?php echo false !== strtotime($customers->getUpdatedAt()) ? format_date($customers->getUpdatedAt(), "f") : '&nbsp;' ?>
+  <?php echo false !== strtotime($customer->getUpdatedAt()) ? format_date($customer->getUpdatedAt(), "f") : '&nbsp;' ?>
 </td>

@@ -21,7 +21,7 @@ Product:
       foreignAlias: Product
       onDelete: CASCADE
     
-Customers:
+Customer:
   actAs: { Timestampable: ~ }
   columns:    
     customer_name: { type: string(255) }   
@@ -31,10 +31,10 @@ Customers:
     email:         { type: string(255), unique: true }
     phone_number:  { type: string(255)}
  
-orders:
+PurchaseOrder:
   columns:
-    product_id:  { type: integer, primary: true }
-    customer_id: { type: integer, primary: true }
+    product_id:  { type: integer }
+    customer_id: { type: integer }
   relations:
     Product:
       class: Product
@@ -42,15 +42,15 @@ orders:
       foreign: id
       type: one
       foreignType: many
-      foreignAlias: orders1
+      foreignAlias: Orders
       onDelete: CASCADE
-    Customers:
-      class: Customers
+    Customer:
+      class: Customer
       local: customer_id
       foreign: id
       type: many
       foreignType: one
-      foreignAlias: orders2
+      foreignAlias: Orders
       onDelete: CASCADE
   
 

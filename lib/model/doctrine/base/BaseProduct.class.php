@@ -11,7 +11,7 @@
  * @property integer $unit_price
  * @property string $description
  * @property ProductCategory $ProductCategory
- * @property Doctrine_Collection $orders1
+ * @property Doctrine_Collection $Orders
  * 
  * @method integer             getCategoryId()      Returns the current record's "category_id" value
  * @method string              getProductName()     Returns the current record's "product_name" value
@@ -19,14 +19,14 @@
  * @method integer             getUnitPrice()       Returns the current record's "unit_price" value
  * @method string              getDescription()     Returns the current record's "description" value
  * @method ProductCategory     getProductCategory() Returns the current record's "ProductCategory" value
- * @method Doctrine_Collection getOrders1()         Returns the current record's "orders1" collection
+ * @method Doctrine_Collection getOrders()          Returns the current record's "Orders" collection
  * @method Product             setCategoryId()      Sets the current record's "category_id" value
  * @method Product             setProductName()     Sets the current record's "product_name" value
  * @method Product             setProductKey()      Sets the current record's "product_key" value
  * @method Product             setUnitPrice()       Sets the current record's "unit_price" value
  * @method Product             setDescription()     Sets the current record's "description" value
  * @method Product             setProductCategory() Sets the current record's "ProductCategory" value
- * @method Product             setOrders1()         Sets the current record's "orders1" collection
+ * @method Product             setOrders()          Sets the current record's "Orders" collection
  * 
  * @package    products
  * @subpackage model
@@ -68,7 +68,7 @@ abstract class BaseProduct extends sfDoctrineRecord
              'foreign' => 'id',
              'onDelete' => 'CASCADE'));
 
-        $this->hasMany('orders as orders1', array(
+        $this->hasMany('PurchaseOrder as Orders', array(
              'local' => 'id',
              'foreign' => 'product_id'));
 

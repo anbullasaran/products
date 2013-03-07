@@ -1,6 +1,6 @@
 <td>
   <ul class="sf_admin_td_actions">
-    <?php echo $helper->linkToEdit($customers, array(  'params' =>   array(  ),  'class_suffix' => 'edit',  'label' => 'Edit',)) ?>
-    <?php echo $helper->linkToDelete($customers, array(  'params' =>   array(  ),  'confirm' => 'Are you sure?',  'class_suffix' => 'delete',  'label' => 'Delete',)) ?>
+    <?php echo $helper->linkToEdit($customer, array(  'params' =>   array(  ),  'class_suffix' => 'edit',  'label' => 'Edit',)) ?>
+    <?php echo $helper->linkToDelete($customer, array(  'params' =>   array(  ),  'confirm' => 'Are you sure?',  'class_suffix' => 'delete',  'label' => 'Delete',)) ?>
   </ul>
 </td>

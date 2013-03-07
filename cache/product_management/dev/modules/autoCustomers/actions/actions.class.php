@@ -53,7 +53,7 @@ abstract class autoCustomersActions extends sfActions
     {
       $this->setFilters($this->configuration->getFilterDefaults());
 
-      $this->redirect('@customers');
+      $this->redirect('@customer');
     }
 
     $this->filters = $this->configuration->getFilterForm($this->getFilters());
@@ -63,7 +63,7 @@ abstract class autoCustomersActions extends sfActions
     {
       $this->setFilters($this->filters->getValues());
 
-      $this->redirect('@customers');
+      $this->redirect('@customer');
     }
 
     $this->pager = $this->getPager();
@@ -75,13 +75,13 @@ abstract class autoCustomersActions extends sfActions
   public function executeNew(sfWebRequest $request)
   {
     $this->form = $this->configuration->getForm();
-    $this->customers = $this->form->getObject();
+    $this->customer = $this->form->getObject();
   }
 
   public function executeCreate(sfWebRequest $request)
   {
     $this->form = $this->configuration->getForm();
-    $this->customers = $this->form->getObject();
+    $this->customer = $this->form->getObject();
 
     $this->processForm($request, $this->form);
 
@@ -90,14 +90,14 @@ abstract class autoCustomersActions extends sfActions
 
   public function executeEdit(sfWebRequest $request)
   {
-    $this->customers = $this->getRoute()->getObject();
-    $this->form = $this->configuration->getForm($this->customers);
+    $this->customer = $this->getRoute()->getObject();
+    $this->form = $this->configuration->getForm($this->customer);
   }
 
   public function executeUpdate(sfWebRequest $request)
   {
-    $this->customers = $this->getRoute()->getObject();
-    $this->form = $this->configuration->getForm($this->customers);
+    $this->customer = $this->getRoute()->getObject();
+    $this->form = $this->configuration->getForm($this->customer);
 
     $this->processForm($request, $this->form);
 
@@ -115,7 +115,7 @@ abstract class autoCustomersActions extends sfActions
       $this->getUser()->setFlash('notice', 'The item was deleted successfully.');
     }
 
-    $this->redirect('@customers');
+    $this->redirect('@customer');
   }
 
   public function executeBatch(sfWebRequest $request)
@@ -126,14 +126,14 @@ abstract class autoCustomersActions extends sfActions
     {
       $this->getUser()->setFlash('error', 'You must at least select one item.');
 
-      $this->redirect('@customers');
+      $this->redirect('@customer');
     }
 
     if (!$action = $request->getParameter('batch_action'))
     {
       $this->getUser()->setFlash('error', 'You must select an action to execute on the selected items.');
 
-      $this->redirect('@customers');
+      $this->redirect('@customer');
     }
 
     if (!method_exists($this, $method = 'execute'.ucfirst($action)))
@@ -146,7 +146,7 @@ abstract class autoCustomersActions extends sfActions
       $this->forward(sfConfig::get('sf_secure_module'), sfConfig::get('sf_secure_action'));
     }
 
-    $validator = new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'customers'));
+    $validator = new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Customer'));
     try
     {
       // validate ids
@@ -160,7 +160,7 @@ abstract class autoCustomersActions extends sfActions
       $this->getUser()->setFlash('error', 'A problem occurs when deleting the selected items as some items do not exist anymore.');
     }
 
-    $this->redirect('@customers');
+    $this->redirect('@customer');
   }
 
   protected function executeBatchDelete(sfWebRequest $request)
@@ -168,7 +168,7 @@ abstract class autoCustomersActions extends sfActions
     $ids = $request->getParameter('ids');
 
     $records = Doctrine_Query::create()
-      ->from('customers')
+      ->from('Customer')
       ->whereIn('id', $ids)
       ->execute();
 
@@ -178,7 +178,7 @@ abstract class autoCustomersActions extends sfActions
     }
 
     $this->getUser()->setFlash('notice', 'The selected items have been deleted successfully.');
-    $this->redirect('@customers');
+    $this->redirect('@customer');
   }
 
   protected function processForm(sfWebRequest $request, sfForm $form)
@@ -189,7 +189,7 @@ abstract class autoCustomersActions extends sfActions
       $notice = $form->getObject()->isNew() ? 'The item was created successfully.' : 'The item was updated successfully.';
 
       try {
-        $customers = $form->save();
+        $customer = $form->save();
       } catch (Doctrine_Validator_Exception $e) {
 
         $errorStack = $form->getObject()->getErrorStack();
@@ -204,19 +204,19 @@ abstract class autoCustomersActions extends sfActions
         return sfView::SUCCESS;
       }
 
-      $this->dispatcher->notify(new sfEvent($this, 'admin.save_object', array('object' => $customers)));
+      $this->dispatcher->notify(new sfEvent($this, 'admin.save_object', array('object' => $customer)));
 
       if ($request->hasParameter('_save_and_add'))
       {
         $this->getUser()->setFlash('notice', $notice.' You can add another one below.');
 
-        $this->redirect('@customers_new');
+        $this->redirect('@customer_new');
       }
       else
       {
         $this->getUser()->setFlash('notice', $notice);
 
-        $this->redirect(array('sf_route' => 'customers_edit', 'sf_subject' => $customers));
+        $this->redirect(array('sf_route' => 'customer_edit', 'sf_subject' => $customer));
       }
     }
     else
@@ -237,7 +237,7 @@ abstract class autoCustomersActions extends sfActions
 
   protected function getPager()
   {
-    $pager = $this->configuration->getPager('customers');
+    $pager = $this->configuration->getPager('Customer');
     $pager->setQuery($this->buildQuery());
     $pager->setPage($this->getPage());
     $pager->init();
@@ -309,6 +309,6 @@ abstract class autoCustomersActions extends sfActions
 
   protected function isValidSortColumn($column)
   {
-    return Doctrine::getTable('customers')->hasColumn($column);
+    return Doctrine::getTable('Customer')->hasColumn($column);
   }
 }

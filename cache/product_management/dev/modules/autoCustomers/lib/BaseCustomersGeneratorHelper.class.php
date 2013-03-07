@@ -12,6 +12,6 @@ abstract class BaseCustomersGeneratorHelper extends sfModelGeneratorHelper
 {
   public function getUrlForAction($action)
   {
-    return 'list' == $action ? 'customers' : 'customers_'.$action;
+    return 'list' == $action ? 'customer' : 'customer_'.$action;
   }
 }

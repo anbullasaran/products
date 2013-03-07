@@ -7,14 +7,14 @@
   <?php include_partial('customers/flashes') ?>
 
   <div id="sf_admin_header">
-    <?php include_partial('customers/form_header', array('customers' => $customers, 'form' => $form, 'configuration' => $configuration)) ?>
+    <?php include_partial('customers/form_header', array('customer' => $customer, 'form' => $form, 'configuration' => $configuration)) ?>
   </div>
 
   <div id="sf_admin_content">
-    <?php include_partial('customers/form', array('customers' => $customers, 'form' => $form, 'configuration' => $configuration, 'helper' => $helper)) ?>
+    <?php include_partial('customers/form', array('customer' => $customer, 'form' => $form, 'configuration' => $configuration, 'helper' => $helper)) ?>
   </div>
 
   <div id="sf_admin_footer">
-    <?php include_partial('customers/form_footer', array('customers' => $customers, 'form' => $form, 'configuration' => $configuration)) ?>
+    <?php include_partial('customers/form_footer', array('customer' => $customer, 'form' => $form, 'configuration' => $configuration)) ?>
   </div>
 </div>

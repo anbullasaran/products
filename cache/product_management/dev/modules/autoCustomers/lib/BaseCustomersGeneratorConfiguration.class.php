@@ -193,7 +193,7 @@ abstract class BaseCustomersGeneratorConfiguration extends sfModelGeneratorConfi
    */
   public function getFormClass()
   {
-    return 'customersForm';
+    return 'CustomerForm';
   }
 
   public function hasFilterForm()
@@ -208,7 +208,7 @@ abstract class BaseCustomersGeneratorConfiguration extends sfModelGeneratorConfi
    */
   public function getFilterFormClass()
   {
-    return 'customersFormFilter';
+    return 'CustomerFormFilter';
   }
 
   public function getPagerClass()
