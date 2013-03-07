@@ -53,7 +53,7 @@ abstract class autoCustomersActions extends sfActions
     {
       $this->setFilters($this->configuration->getFilterDefaults());
 
-      $this->redirect('@customer');
+      $this->redirect('@customers');
     }
 
     $this->filters = $this->configuration->getFilterForm($this->getFilters());
@@ -63,7 +63,7 @@ abstract class autoCustomersActions extends sfActions
     {
       $this->setFilters($this->filters->getValues());
 
-      $this->redirect('@customer');
+      $this->redirect('@customers');
     }
 
     $this->pager = $this->getPager();
@@ -115,7 +115,7 @@ abstract class autoCustomersActions extends sfActions
       $this->getUser()->setFlash('notice', 'The item was deleted successfully.');
     }
 
-    $this->redirect('@customer');
+    $this->redirect('@customers');
   }
 
   public function executeBatch(sfWebRequest $request)
@@ -126,14 +126,14 @@ abstract class autoCustomersActions extends sfActions
     {
       $this->getUser()->setFlash('error', 'You must at least select one item.');
 
-      $this->redirect('@customer');
+      $this->redirect('@customers');
     }
 
     if (!$action = $request->getParameter('batch_action'))
     {
       $this->getUser()->setFlash('error', 'You must select an action to execute on the selected items.');
 
-      $this->redirect('@customer');
+      $this->redirect('@customers');
     }
 
     if (!method_exists($this, $method = 'execute'.ucfirst($action)))
@@ -160,7 +160,7 @@ abstract class autoCustomersActions extends sfActions
       $this->getUser()->setFlash('error', 'A problem occurs when deleting the selected items as some items do not exist anymore.');
     }
 
-    $this->redirect('@customer');
+    $this->redirect('@customers');
   }
 
   protected function executeBatchDelete(sfWebRequest $request)
@@ -178,7 +178,7 @@ abstract class autoCustomersActions extends sfActions
     }
 
     $this->getUser()->setFlash('notice', 'The selected items have been deleted successfully.');
-    $this->redirect('@customer');
+    $this->redirect('@customers');
   }
 
   protected function processForm(sfWebRequest $request, sfForm $form)
@@ -210,13 +210,13 @@ abstract class autoCustomersActions extends sfActions
       {
         $this->getUser()->setFlash('notice', $notice.' You can add another one below.');
 
-        $this->redirect('@customer_new');
+        $this->redirect('@customers_new');
       }
       else
       {
         $this->getUser()->setFlash('notice', $notice);
 
-        $this->redirect(array('sf_route' => 'customer_edit', 'sf_subject' => $customer));
+        $this->redirect(array('sf_route' => 'customers_edit', 'sf_subject' => $customer));
       }
     }
     else

@@ -12,4 +12,9 @@
  */
 class Product extends BaseProduct
 {
+    public function __toString()
+	{
+		return $this->getProductName();
+	}
+
 }

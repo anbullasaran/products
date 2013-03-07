@@ -7,7 +7,7 @@ generator:
     with_show:             false
     singular:              ~
     plural:                ~
-    route_prefix:          customer
+    route_prefix:          customers
     with_doctrine_route:   true
     actions_base_class:    sfActions
 

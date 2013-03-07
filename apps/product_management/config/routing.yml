@@ -1,4 +1,4 @@
-product_category_product_category:
+product_category:
   class: sfDoctrineRouteCollection
   options:
     model:                ProductCategory
@@ -7,7 +7,7 @@ product_category_product_category:
     column:               id
     with_wildcard_routes: true
 
-customer:
+customers:
   class: sfDoctrineRouteCollection
   options:
     model:                Customer
@@ -21,8 +21,8 @@ purchase_order:
   options:
     model:                PurchaseOrder
     module:               purchase_orders
-    prefix_path:          /purchase_orders
-    column:               Array
+    prefix_path:          /purchase_order
+    column:               id
     with_wildcard_routes: true
 
 orders:
@@ -34,30 +34,12 @@ orders:
     column:               Array
     with_wildcard_routes: true
 
-customers:
-  class: sfDoctrineRouteCollection
-  options:
-    model:                customers
-    module:               customers
-    prefix_path:          /customers
-    column:               id
-    with_wildcard_routes: true
-
 product:
   class: sfDoctrineRouteCollection
   options:
     model:                Product
     module:               product
     prefix_path:          /product
-    column:               id
-    with_wildcard_routes: true
-
-product_category:
-  class: sfDoctrineRouteCollection
-  options:
-    model:                ProductCategory
-    module:               category
-    prefix_path:          /category
     column:               id
     with_wildcard_routes: true
 

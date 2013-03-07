@@ -48,8 +48,8 @@ PurchaseOrder:
       class: Customer
       local: customer_id
       foreign: id
-      type: many
-      foreignType: one
+      type: one
+      foreignType: many
       foreignAlias: Orders
       onDelete: CASCADE
   

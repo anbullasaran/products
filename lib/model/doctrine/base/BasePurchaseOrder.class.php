@@ -8,16 +8,16 @@
  * @property integer $product_id
  * @property integer $customer_id
  * @property Product $Product
- * @property Doctrine_Collection $Customer
+ * @property Customer $Customer
  * 
- * @method integer             getProductId()   Returns the current record's "product_id" value
- * @method integer             getCustomerId()  Returns the current record's "customer_id" value
- * @method Product             getProduct()     Returns the current record's "Product" value
- * @method Doctrine_Collection getCustomer()    Returns the current record's "Customer" collection
- * @method PurchaseOrder       setProductId()   Sets the current record's "product_id" value
- * @method PurchaseOrder       setCustomerId()  Sets the current record's "customer_id" value
- * @method PurchaseOrder       setProduct()     Sets the current record's "Product" value
- * @method PurchaseOrder       setCustomer()    Sets the current record's "Customer" collection
+ * @method integer       getProductId()   Returns the current record's "product_id" value
+ * @method integer       getCustomerId()  Returns the current record's "customer_id" value
+ * @method Product       getProduct()     Returns the current record's "Product" value
+ * @method Customer      getCustomer()    Returns the current record's "Customer" value
+ * @method PurchaseOrder setProductId()   Sets the current record's "product_id" value
+ * @method PurchaseOrder setCustomerId()  Sets the current record's "customer_id" value
+ * @method PurchaseOrder setProduct()     Sets the current record's "Product" value
+ * @method PurchaseOrder setCustomer()    Sets the current record's "Customer" value
  * 
  * @package    products
  * @subpackage model
@@ -45,7 +45,7 @@ abstract class BasePurchaseOrder extends sfDoctrineRecord
              'foreign' => 'id',
              'onDelete' => 'CASCADE'));
 
-        $this->hasMany('Customer', array(
+        $this->hasOne('Customer', array(
              'local' => 'customer_id',
              'foreign' => 'id',
              'onDelete' => 'CASCADE'));

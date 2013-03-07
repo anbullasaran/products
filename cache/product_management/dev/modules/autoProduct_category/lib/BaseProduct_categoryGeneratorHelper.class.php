@@ -12,6 +12,6 @@ abstract class BaseProduct_categoryGeneratorHelper extends sfModelGeneratorHelpe
 {
   public function getUrlForAction($action)
   {
-    return 'list' == $action ? 'product_category_product_category' : 'product_category_product_category_'.$action;
+    return 'list' == $action ? 'product_category' : 'product_category_'.$action;
   }
 }

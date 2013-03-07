@@ -37,17 +37,17 @@ abstract class BasePurchase_ordersGeneratorConfiguration extends sfModelGenerato
 
   public function getListActions()
   {
-    return array(  '_new' => NULL,);
+    return array();
   }
 
   public function getListBatchActions()
   {
-    return array(  '_delete' => NULL,);
+    return array();
   }
 
   public function getListParams()
   {
-    return '%%id%% - %%product_id%% - %%customer_id%%';
+    return '%%id%% - %%Product%% - %%Customer%%';
   }
 
   public function getListLayout()
@@ -92,7 +92,7 @@ abstract class BasePurchase_ordersGeneratorConfiguration extends sfModelGenerato
 
   public function getListDisplay()
   {
-    return array(  0 => 'id',  1 => 'product_id',  2 => 'customer_id',);
+    return array(  0 => 'id',  1 => 'Product',  2 => 'Customer',);
   }
 
   public function getFieldsDefault()

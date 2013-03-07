@@ -53,7 +53,7 @@ abstract class autoProduct_categoryActions extends sfActions
     {
       $this->setFilters($this->configuration->getFilterDefaults());
 
-      $this->redirect('@product_category_product_category');
+      $this->redirect('@product_category');
     }
 
     $this->filters = $this->configuration->getFilterForm($this->getFilters());
@@ -63,7 +63,7 @@ abstract class autoProduct_categoryActions extends sfActions
     {
       $this->setFilters($this->filters->getValues());
 
-      $this->redirect('@product_category_product_category');
+      $this->redirect('@product_category');
     }
 
     $this->pager = $this->getPager();
@@ -115,7 +115,7 @@ abstract class autoProduct_categoryActions extends sfActions
       $this->getUser()->setFlash('notice', 'The item was deleted successfully.');
     }
 
-    $this->redirect('@product_category_product_category');
+    $this->redirect('@product_category');
   }
 
   public function executeBatch(sfWebRequest $request)
@@ -126,14 +126,14 @@ abstract class autoProduct_categoryActions extends sfActions
     {
       $this->getUser()->setFlash('error', 'You must at least select one item.');
 
-      $this->redirect('@product_category_product_category');
+      $this->redirect('@product_category');
     }
 
     if (!$action = $request->getParameter('batch_action'))
     {
       $this->getUser()->setFlash('error', 'You must select an action to execute on the selected items.');
 
-      $this->redirect('@product_category_product_category');
+      $this->redirect('@product_category');
     }
 
     if (!method_exists($this, $method = 'execute'.ucfirst($action)))
@@ -160,7 +160,7 @@ abstract class autoProduct_categoryActions extends sfActions
       $this->getUser()->setFlash('error', 'A problem occurs when deleting the selected items as some items do not exist anymore.');
     }
 
-    $this->redirect('@product_category_product_category');
+    $this->redirect('@product_category');
   }
 
   protected function executeBatchDelete(sfWebRequest $request)
@@ -178,7 +178,7 @@ abstract class autoProduct_categoryActions extends sfActions
     }
 
     $this->getUser()->setFlash('notice', 'The selected items have been deleted successfully.');
-    $this->redirect('@product_category_product_category');
+    $this->redirect('@product_category');
   }
 
   protected function processForm(sfWebRequest $request, sfForm $form)
@@ -210,13 +210,13 @@ abstract class autoProduct_categoryActions extends sfActions
       {
         $this->getUser()->setFlash('notice', $notice.' You can add another one below.');
 
-        $this->redirect('@product_category_product_category_new');
+        $this->redirect('@product_category_new');
       }
       else
       {
         $this->getUser()->setFlash('notice', $notice);
 
-        $this->redirect(array('sf_route' => 'product_category_product_category_edit', 'sf_subject' => $product_category));
+        $this->redirect(array('sf_route' => 'product_category_edit', 'sf_subject' => $product_category));
       }
     }
     else

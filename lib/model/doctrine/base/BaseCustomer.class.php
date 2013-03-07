@@ -11,22 +11,22 @@
  * @property string $contact_addr
  * @property string $email
  * @property string $phone_number
- * @property PurchaseOrder $Orders
+ * @property Doctrine_Collection $Orders
  * 
- * @method string        getCustomerName()  Returns the current record's "customer_name" value
- * @method string        getCustomerType()  Returns the current record's "customer_type" value
- * @method string        getLocation()      Returns the current record's "location" value
- * @method string        getContactAddr()   Returns the current record's "contact_addr" value
- * @method string        getEmail()         Returns the current record's "email" value
- * @method string        getPhoneNumber()   Returns the current record's "phone_number" value
- * @method PurchaseOrder getOrders()        Returns the current record's "Orders" value
- * @method Customer      setCustomerName()  Sets the current record's "customer_name" value
- * @method Customer      setCustomerType()  Sets the current record's "customer_type" value
- * @method Customer      setLocation()      Sets the current record's "location" value
- * @method Customer      setContactAddr()   Sets the current record's "contact_addr" value
- * @method Customer      setEmail()         Sets the current record's "email" value
- * @method Customer      setPhoneNumber()   Sets the current record's "phone_number" value
- * @method Customer      setOrders()        Sets the current record's "Orders" value
+ * @method string              getCustomerName()  Returns the current record's "customer_name" value
+ * @method string              getCustomerType()  Returns the current record's "customer_type" value
+ * @method string              getLocation()      Returns the current record's "location" value
+ * @method string              getContactAddr()   Returns the current record's "contact_addr" value
+ * @method string              getEmail()         Returns the current record's "email" value
+ * @method string              getPhoneNumber()   Returns the current record's "phone_number" value
+ * @method Doctrine_Collection getOrders()        Returns the current record's "Orders" collection
+ * @method Customer            setCustomerName()  Sets the current record's "customer_name" value
+ * @method Customer            setCustomerType()  Sets the current record's "customer_type" value
+ * @method Customer            setLocation()      Sets the current record's "location" value
+ * @method Customer            setContactAddr()   Sets the current record's "contact_addr" value
+ * @method Customer            setEmail()         Sets the current record's "email" value
+ * @method Customer            setPhoneNumber()   Sets the current record's "phone_number" value
+ * @method Customer            setOrders()        Sets the current record's "Orders" collection
  * 
  * @package    products
  * @subpackage model
@@ -68,7 +68,7 @@ abstract class BaseCustomer extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasOne('PurchaseOrder as Orders', array(
+        $this->hasMany('PurchaseOrder as Orders', array(
              'local' => 'id',
              'foreign' => 'customer_id'));
 
