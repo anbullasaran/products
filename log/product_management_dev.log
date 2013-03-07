@@ -27629,3 +27629,1291 @@ Mar 07 13:32:43 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list
 Mar 07 13:32:43 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list_footer" 0.44 ms (1)
 Mar 07 13:32:43 symfony [info] {sfWebResponse} Send content (300322 o)
 Mar 07 13:32:43 symfony [info] {myUser} Remove old flash messages ("notice")
+Mar 07 14:02:54 symfony [info] {sfPatternRouting} Match route "purchase_order" (/purchase_order.:sf_format) for /purchase_order with parameters array (  'module' => 'purchase_orders',  'action' => 'index',  'sf_format' => 'html',)
+Mar 07 14:02:54 symfony [info] {myUser} Automatic user logout due to timeout
+Mar 07 14:02:54 symfony [info] {myUser} User is not authenticated
+Mar 07 14:02:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 07 14:02:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 07 14:02:54 symfony [info] {purchase_ordersActions} Call "purchase_ordersActions->executeIndex()"
+Mar 07 14:02:55 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 07 14:02:55 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM purchase_order p - ()
+Mar 07 14:02:55 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/indexSuccess.php"
+Mar 07 14:02:55 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_assets.php"
+Mar 07 14:02:55 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_flashes.php"
+Mar 07 14:02:55 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list_header.php"
+Mar 07 14:02:55 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_filters.php"
+Mar 07 14:02:55 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_filters_field.php"
+Mar 07 14:02:55 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_id AS p__category_id, p.product_name AS p__product_name, p.product_key AS p__product_key, p.unit_price AS p__unit_price, p.description AS p__description, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product p - ()
+Mar 07 14:02:55 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_filters_field.php"
+Mar 07 14:02:55 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.customer_name AS c__customer_name, c.customer_type AS c__customer_type, c.location AS c__location, c.contact_addr AS c__contact_addr, c.email AS c__email, c.phone_number AS c__phone_number, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM customer c - ()
+Mar 07 14:02:55 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list.php"
+Mar 07 14:02:55 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list_th_tabular.php"
+Mar 07 14:02:55 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:02:55 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:02:55 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:02:55 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:02:55 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:02:55 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:02:55 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.product_id AS p__product_id, p.customer_id AS p__customer_id FROM purchase_order p LIMIT 20 - ()
+Mar 07 14:02:55 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list_td_tabular.php"
+Mar 07 14:02:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.category_id AS p__category_id, p.product_name AS p__product_name, p.product_key AS p__product_key, p.unit_price AS p__unit_price, p.description AS p__description, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product p WHERE (p.id = ?) - (1)
+Mar 07 14:02:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.customer_name AS c__customer_name, c.customer_type AS c__customer_type, c.location AS c__location, c.contact_addr AS c__contact_addr, c.email AS c__email, c.phone_number AS c__phone_number, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM customer c WHERE (c.id = ?) - (1)
+Mar 07 14:02:55 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list_td_actions.php"
+Mar 07 14:02:55 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list_td_tabular.php"
+Mar 07 14:02:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.category_id AS p__category_id, p.product_name AS p__product_name, p.product_key AS p__product_key, p.unit_price AS p__unit_price, p.description AS p__description, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product p WHERE (p.id = ?) - (1)
+Mar 07 14:02:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.customer_name AS c__customer_name, c.customer_type AS c__customer_type, c.location AS c__location, c.contact_addr AS c__contact_addr, c.email AS c__email, c.phone_number AS c__phone_number, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM customer c WHERE (c.id = ?) - (2)
+Mar 07 14:02:55 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list_td_actions.php"
+Mar 07 14:02:55 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/apps/product_management/modules/purchase_orders/templates/_list_batch_actions.php"
+Mar 07 14:02:55 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/apps/product_management/modules/purchase_orders/templates/_list_actions.php"
+Mar 07 14:02:55 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list_footer.php"
+Mar 07 14:02:55 symfony [info] {sfPHPView} Decorate content with "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:02:55 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:02:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 07 14:02:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 07 14:02:55 symfony [info] {sfWebDebugLogger} Configuration 23.85 ms (12)
+Mar 07 14:02:55 symfony [info] {sfWebDebugLogger} Factories 29.87 ms (1)
+Mar 07 14:02:55 symfony [info] {sfWebDebugLogger} Action "purchase_orders/index" 84.86 ms (1)
+Mar 07 14:02:55 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (9)
+Mar 07 14:02:55 symfony [info] {sfWebDebugLogger} View "Success" for "purchase_orders/index" 77.51 ms (1)
+Mar 07 14:02:55 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_assets" 0.50 ms (1)
+Mar 07 14:02:55 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_flashes" 0.45 ms (1)
+Mar 07 14:02:55 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list_header" 0.40 ms (1)
+Mar 07 14:02:55 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_filters" 17.62 ms (1)
+Mar 07 14:02:55 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_filters_field" 13.11 ms (2)
+Mar 07 14:02:55 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list" 45.78 ms (1)
+Mar 07 14:02:55 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list_th_tabular" 26.04 ms (1)
+Mar 07 14:02:55 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list_td_tabular" 13.64 ms (2)
+Mar 07 14:02:55 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list_td_actions" 2.60 ms (2)
+Mar 07 14:02:55 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list_batch_actions" 0.73 ms (1)
+Mar 07 14:02:55 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list_actions" 0.50 ms (1)
+Mar 07 14:02:55 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list_footer" 0.41 ms (1)
+Mar 07 14:02:55 symfony [info] {sfWebResponse} Send content (301918 o)
+Mar 07 14:02:57 symfony [info] {sfPatternRouting} Match route "product_category" (/product_category.:sf_format) for /product_category with parameters array (  'module' => 'product_category',  'action' => 'index',  'sf_format' => 'html',)
+Mar 07 14:02:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 07 14:02:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 07 14:02:57 symfony [info] {product_categoryActions} Call "product_categoryActions->executeIndex()"
+Mar 07 14:02:57 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 07 14:02:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM product_category p - ()
+Mar 07 14:02:57 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/modules/product_category/templates/indexSuccess.php"
+Mar 07 14:02:57 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_assets.php"
+Mar 07 14:02:57 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_flashes.php"
+Mar 07 14:02:57 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_header.php"
+Mar 07 14:02:57 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_filters.php"
+Mar 07 14:02:57 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_filters_field.php"
+Mar 07 14:02:57 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_filters_field.php"
+Mar 07 14:02:57 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_filters_field.php"
+Mar 07 14:02:57 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list.php"
+Mar 07 14:02:57 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_th_tabular.php"
+Mar 07 14:02:57 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:02:57 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:02:57 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:02:57 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:02:57 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:02:57 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:02:57 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:02:57 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:02:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_name AS p__category_name, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product_category p LIMIT 20 - ()
+Mar 07 14:02:57 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_td_batch_actions.php"
+Mar 07 14:02:57 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_td_tabular.php"
+Mar 07 14:02:57 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_td_actions.php"
+Mar 07 14:02:57 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_batch_actions.php"
+Mar 07 14:02:57 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_actions.php"
+Mar 07 14:02:57 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_footer.php"
+Mar 07 14:02:57 symfony [info] {sfPHPView} Decorate content with "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:02:57 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:02:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 07 14:02:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 07 14:02:57 symfony [info] {sfWebDebugLogger} Configuration 26.38 ms (12)
+Mar 07 14:02:57 symfony [info] {sfWebDebugLogger} Factories 23.75 ms (1)
+Mar 07 14:02:57 symfony [info] {sfWebDebugLogger} Action "product_category/index" 53.91 ms (1)
+Mar 07 14:02:57 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 07 14:02:57 symfony [info] {sfWebDebugLogger} View "Success" for "product_category/index" 101.44 ms (1)
+Mar 07 14:02:57 symfony [info] {sfWebDebugLogger} Partial "product_category/_assets" 0.47 ms (1)
+Mar 07 14:02:57 symfony [info] {sfWebDebugLogger} Partial "product_category/_flashes" 0.43 ms (1)
+Mar 07 14:02:57 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_header" 0.40 ms (1)
+Mar 07 14:02:57 symfony [info] {sfWebDebugLogger} Partial "product_category/_filters" 26.72 ms (1)
+Mar 07 14:02:57 symfony [info] {sfWebDebugLogger} Partial "product_category/_filters_field" 23.79 ms (3)
+Mar 07 14:02:57 symfony [info] {sfWebDebugLogger} Partial "product_category/_list" 61.39 ms (1)
+Mar 07 14:02:57 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_th_tabular" 30.35 ms (1)
+Mar 07 14:02:57 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_td_batch_actions" 0.90 ms (1)
+Mar 07 14:02:57 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_td_tabular" 19.91 ms (1)
+Mar 07 14:02:57 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_td_actions" 1.42 ms (1)
+Mar 07 14:02:57 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_batch_actions" 0.80 ms (1)
+Mar 07 14:02:57 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_actions" 0.51 ms (1)
+Mar 07 14:02:57 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_footer" 0.38 ms (1)
+Mar 07 14:02:57 symfony [info] {sfWebResponse} Send content (216363 o)
+Mar 07 14:02:59 symfony [info] {sfPatternRouting} Match route "product_category" (/product_category.:sf_format) for /product_category with parameters array (  'module' => 'product_category',  'action' => 'index',  'sf_format' => 'html',)
+Mar 07 14:02:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 07 14:02:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 07 14:02:59 symfony [info] {product_categoryActions} Call "product_categoryActions->executeIndex()"
+Mar 07 14:02:59 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 07 14:02:59 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM product_category p - ()
+Mar 07 14:02:59 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/modules/product_category/templates/indexSuccess.php"
+Mar 07 14:02:59 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_assets.php"
+Mar 07 14:02:59 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_flashes.php"
+Mar 07 14:02:59 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_header.php"
+Mar 07 14:02:59 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_filters.php"
+Mar 07 14:02:59 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_filters_field.php"
+Mar 07 14:02:59 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_filters_field.php"
+Mar 07 14:02:59 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_filters_field.php"
+Mar 07 14:02:59 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list.php"
+Mar 07 14:02:59 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_th_tabular.php"
+Mar 07 14:02:59 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:02:59 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:02:59 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:02:59 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:02:59 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:02:59 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:02:59 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:02:59 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:02:59 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_name AS p__category_name, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product_category p LIMIT 20 - ()
+Mar 07 14:02:59 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_td_batch_actions.php"
+Mar 07 14:02:59 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_td_tabular.php"
+Mar 07 14:02:59 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_td_actions.php"
+Mar 07 14:02:59 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_batch_actions.php"
+Mar 07 14:02:59 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_actions.php"
+Mar 07 14:02:59 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_footer.php"
+Mar 07 14:02:59 symfony [info] {sfPHPView} Decorate content with "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:02:59 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:02:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 07 14:02:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 07 14:02:59 symfony [info] {sfWebDebugLogger} Configuration 24.55 ms (12)
+Mar 07 14:02:59 symfony [info] {sfWebDebugLogger} Factories 22.01 ms (1)
+Mar 07 14:02:59 symfony [info] {sfWebDebugLogger} Action "product_category/index" 30.20 ms (1)
+Mar 07 14:02:59 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 07 14:02:59 symfony [info] {sfWebDebugLogger} View "Success" for "product_category/index" 82.71 ms (1)
+Mar 07 14:02:59 symfony [info] {sfWebDebugLogger} Partial "product_category/_assets" 1.17 ms (1)
+Mar 07 14:02:59 symfony [info] {sfWebDebugLogger} Partial "product_category/_flashes" 0.72 ms (1)
+Mar 07 14:02:59 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_header" 0.56 ms (1)
+Mar 07 14:02:59 symfony [info] {sfWebDebugLogger} Partial "product_category/_filters" 15.97 ms (1)
+Mar 07 14:02:59 symfony [info] {sfWebDebugLogger} Partial "product_category/_filters_field" 12.10 ms (3)
+Mar 07 14:02:59 symfony [info] {sfWebDebugLogger} Partial "product_category/_list" 46.27 ms (1)
+Mar 07 14:02:59 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_th_tabular" 27.78 ms (1)
+Mar 07 14:02:59 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_td_batch_actions" 0.63 ms (1)
+Mar 07 14:02:59 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_td_tabular" 9.61 ms (1)
+Mar 07 14:02:59 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_td_actions" 1.50 ms (1)
+Mar 07 14:02:59 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_batch_actions" 0.83 ms (1)
+Mar 07 14:02:59 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_actions" 0.56 ms (1)
+Mar 07 14:02:59 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_footer" 0.42 ms (1)
+Mar 07 14:02:59 symfony [info] {sfWebResponse} Send content (216361 o)
+Mar 07 14:03:00 symfony [info] {sfPatternRouting} Match route "product" (/product.:sf_format) for /product with parameters array (  'module' => 'product',  'action' => 'index',  'sf_format' => 'html',)
+Mar 07 14:03:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 07 14:03:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 07 14:03:00 symfony [info] {productActions} Call "productActions->executeIndex()"
+Mar 07 14:03:00 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 07 14:03:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM product p - ()
+Mar 07 14:03:00 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/indexSuccess.php"
+Mar 07 14:03:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_assets.php"
+Mar 07 14:03:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_flashes.php"
+Mar 07 14:03:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_header.php"
+Mar 07 14:03:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters.php"
+Mar 07 14:03:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:03:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_name AS p__category_name, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product_category p - ()
+Mar 07 14:03:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:03:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:03:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:03:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:03:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:03:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:03:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list.php"
+Mar 07 14:03:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_th_tabular.php"
+Mar 07 14:03:00 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:00 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:00 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:00 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:00 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:00 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:00 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:00 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:00 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:00 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:00 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:00 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:00 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:00 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:00 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:00 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_id AS p__category_id, p.product_name AS p__product_name, p.product_key AS p__product_key, p.unit_price AS p__unit_price, p.description AS p__description, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product p LIMIT 20 - ()
+Mar 07 14:03:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_batch_actions.php"
+Mar 07 14:03:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_tabular.php"
+Mar 07 14:03:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_actions.php"
+Mar 07 14:03:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_batch_actions.php"
+Mar 07 14:03:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_actions.php"
+Mar 07 14:03:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_footer.php"
+Mar 07 14:03:00 symfony [info] {sfPHPView} Decorate content with "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:03:00 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:03:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 07 14:03:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 07 14:03:00 symfony [info] {sfWebDebugLogger} Configuration 23.59 ms (12)
+Mar 07 14:03:00 symfony [info] {sfWebDebugLogger} Factories 22.21 ms (1)
+Mar 07 14:03:00 symfony [info] {sfWebDebugLogger} Action "product/index" 36.68 ms (1)
+Mar 07 14:03:00 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (4)
+Mar 07 14:03:00 symfony [info] {sfWebDebugLogger} View "Success" for "product/index" 99.06 ms (1)
+Mar 07 14:03:00 symfony [info] {sfWebDebugLogger} Partial "product/_assets" 0.90 ms (1)
+Mar 07 14:03:00 symfony [info] {sfWebDebugLogger} Partial "product/_flashes" 0.87 ms (1)
+Mar 07 14:03:00 symfony [info] {sfWebDebugLogger} Partial "product/_list_header" 0.75 ms (1)
+Mar 07 14:03:00 symfony [info] {sfWebDebugLogger} Partial "product/_filters" 33.39 ms (1)
+Mar 07 14:03:00 symfony [info] {sfWebDebugLogger} Partial "product/_filters_field" 27.50 ms (7)
+Mar 07 14:03:00 symfony [info] {sfWebDebugLogger} Partial "product/_list" 46.96 ms (1)
+Mar 07 14:03:00 symfony [info] {sfWebDebugLogger} Partial "product/_list_th_tabular" 29.17 ms (1)
+Mar 07 14:03:00 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_batch_actions" 0.71 ms (1)
+Mar 07 14:03:00 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_tabular" 11.84 ms (1)
+Mar 07 14:03:00 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_actions" 1.65 ms (1)
+Mar 07 14:03:00 symfony [info] {sfWebDebugLogger} Partial "product/_list_batch_actions" 0.92 ms (1)
+Mar 07 14:03:00 symfony [info] {sfWebDebugLogger} Partial "product/_list_actions" 0.66 ms (1)
+Mar 07 14:03:00 symfony [info] {sfWebDebugLogger} Partial "product/_list_footer" 0.49 ms (1)
+Mar 07 14:03:00 symfony [info] {sfWebResponse} Send content (307114 o)
+Mar 07 14:03:01 symfony [info] {sfPatternRouting} Match route "customers_edit" (/customers/:id/edit.:sf_format) for /customers/2/edit with parameters array (  'module' => 'customers',  'action' => 'edit',  'sf_format' => 'html',  'id' => '2',)
+Mar 07 14:03:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 07 14:03:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 07 14:03:01 symfony [info] {customersActions} Call "customersActions->executeEdit()"
+Mar 07 14:03:01 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 07 14:03:01 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.customer_name AS c__customer_name, c.customer_type AS c__customer_type, c.location AS c__location, c.contact_addr AS c__contact_addr, c.email AS c__email, c.phone_number AS c__phone_number, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM customer c WHERE (c.id = ?) - (2)
+Mar 07 14:03:01 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/editSuccess.php"
+Mar 07 14:03:01 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_assets.php"
+Mar 07 14:03:01 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_flashes.php"
+Mar 07 14:03:01 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_form_header.php"
+Mar 07 14:03:01 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_form.php"
+Mar 07 14:03:01 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_form_fieldset.php"
+Mar 07 14:03:01 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_form_field.php"
+Mar 07 14:03:01 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_form_field.php"
+Mar 07 14:03:01 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_form_field.php"
+Mar 07 14:03:01 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_form_field.php"
+Mar 07 14:03:01 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_form_field.php"
+Mar 07 14:03:01 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_form_field.php"
+Mar 07 14:03:01 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_form_actions.php"
+Mar 07 14:03:01 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_form_footer.php"
+Mar 07 14:03:01 symfony [info] {sfPHPView} Decorate content with "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:03:01 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:03:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 07 14:03:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 07 14:03:01 symfony [info] {sfWebDebugLogger} Configuration 1.23 ms (10)
+Mar 07 14:03:01 symfony [info] {sfWebDebugLogger} Factories 19.65 ms (1)
+Mar 07 14:03:01 symfony [info] {sfWebDebugLogger} Action "customers/edit" 40.46 ms (1)
+Mar 07 14:03:01 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (2)
+Mar 07 14:03:01 symfony [info] {sfWebDebugLogger} View "Success" for "customers/edit" 23.83 ms (1)
+Mar 07 14:03:01 symfony [info] {sfWebDebugLogger} Partial "customers/_assets" 0.58 ms (1)
+Mar 07 14:03:01 symfony [info] {sfWebDebugLogger} Partial "customers/_flashes" 0.52 ms (1)
+Mar 07 14:03:01 symfony [info] {sfWebDebugLogger} Partial "customers/_form_header" 0.47 ms (1)
+Mar 07 14:03:01 symfony [info] {sfWebDebugLogger} Partial "customers/_form" 12.79 ms (1)
+Mar 07 14:03:01 symfony [info] {sfWebDebugLogger} Partial "customers/_form_fieldset" 8.44 ms (1)
+Mar 07 14:03:01 symfony [info] {sfWebDebugLogger} Partial "customers/_form_field" 6.21 ms (6)
+Mar 07 14:03:01 symfony [info] {sfWebDebugLogger} Partial "customers/_form_actions" 1.64 ms (1)
+Mar 07 14:03:01 symfony [info] {sfWebDebugLogger} Partial "customers/_form_footer" 0.51 ms (1)
+Mar 07 14:03:01 symfony [info] {sfWebResponse} Send content (172355 o)
+Mar 07 14:03:06 symfony [info] {sfPatternRouting} Match route "customers" (/customers.:sf_format) for /customers with parameters array (  'module' => 'customers',  'action' => 'index',  'sf_format' => 'html',)
+Mar 07 14:03:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 07 14:03:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 07 14:03:06 symfony [info] {customersActions} Call "customersActions->executeIndex()"
+Mar 07 14:03:06 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 07 14:03:06 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM customer c - ()
+Mar 07 14:03:06 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/indexSuccess.php"
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_assets.php"
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_flashes.php"
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_header.php"
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters.php"
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list.php"
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_th_tabular.php"
+Mar 07 14:03:06 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:06 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:06 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:06 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:06 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:06 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:06 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:06 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:06 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:06 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:06 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:06 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:06 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:06 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:06 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:06 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:06 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:06 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:06 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.customer_name AS c__customer_name, c.customer_type AS c__customer_type, c.location AS c__location, c.contact_addr AS c__contact_addr, c.email AS c__email, c.phone_number AS c__phone_number, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM customer c LIMIT 20 - ()
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_batch_actions.php"
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_tabular.php"
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_actions.php"
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_batch_actions.php"
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_tabular.php"
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_actions.php"
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_batch_actions.php"
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_actions.php"
+Mar 07 14:03:06 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_footer.php"
+Mar 07 14:03:06 symfony [info] {sfPHPView} Decorate content with "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:03:06 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:03:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 07 14:03:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 07 14:03:06 symfony [info] {sfWebDebugLogger} Configuration 23.40 ms (12)
+Mar 07 14:03:06 symfony [info] {sfWebDebugLogger} Factories 17.45 ms (1)
+Mar 07 14:03:06 symfony [info] {sfWebDebugLogger} Action "customers/index" 33.07 ms (1)
+Mar 07 14:03:06 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 07 14:03:06 symfony [info] {sfWebDebugLogger} View "Success" for "customers/index" 88.05 ms (1)
+Mar 07 14:03:06 symfony [info] {sfWebDebugLogger} Partial "customers/_assets" 0.59 ms (1)
+Mar 07 14:03:06 symfony [info] {sfWebDebugLogger} Partial "customers/_flashes" 0.56 ms (1)
+Mar 07 14:03:06 symfony [info] {sfWebDebugLogger} Partial "customers/_list_header" 0.46 ms (1)
+Mar 07 14:03:06 symfony [info] {sfWebDebugLogger} Partial "customers/_filters" 21.23 ms (1)
+Mar 07 14:03:06 symfony [info] {sfWebDebugLogger} Partial "customers/_filters_field" 16.42 ms (8)
+Mar 07 14:03:06 symfony [info] {sfWebDebugLogger} Partial "customers/_list" 51.49 ms (1)
+Mar 07 14:03:06 symfony [info] {sfWebDebugLogger} Partial "customers/_list_th_tabular" 29.49 ms (1)
+Mar 07 14:03:06 symfony [info] {sfWebDebugLogger} Partial "customers/_list_td_batch_actions" 1.04 ms (2)
+Mar 07 14:03:06 symfony [info] {sfWebDebugLogger} Partial "customers/_list_td_tabular" 11.17 ms (2)
+Mar 07 14:03:06 symfony [info] {sfWebDebugLogger} Partial "customers/_list_td_actions" 2.66 ms (2)
+Mar 07 14:03:06 symfony [info] {sfWebDebugLogger} Partial "customers/_list_batch_actions" 0.87 ms (1)
+Mar 07 14:03:06 symfony [info] {sfWebDebugLogger} Partial "customers/_list_actions" 0.52 ms (1)
+Mar 07 14:03:06 symfony [info] {sfWebDebugLogger} Partial "customers/_list_footer" 0.41 ms (1)
+Mar 07 14:03:06 symfony [info] {sfWebResponse} Send content (330680 o)
+Mar 07 14:03:11 symfony [info] {sfPatternRouting} Match route "product_new" (/product/new.:sf_format) for /product/new with parameters array (  'module' => 'product',  'action' => 'new',  'sf_format' => 'html',)
+Mar 07 14:03:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 07 14:03:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 07 14:03:11 symfony [info] {productActions} Call "productActions->executeNew()"
+Mar 07 14:03:11 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/newSuccess.php"
+Mar 07 14:03:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_assets.php"
+Mar 07 14:03:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_flashes.php"
+Mar 07 14:03:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_form_header.php"
+Mar 07 14:03:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_form.php"
+Mar 07 14:03:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_form_fieldset.php"
+Mar 07 14:03:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_form_field.php"
+Mar 07 14:03:11 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 07 14:03:11 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_name AS p__category_name, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product_category p - ()
+Mar 07 14:03:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_form_field.php"
+Mar 07 14:03:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_form_field.php"
+Mar 07 14:03:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_form_field.php"
+Mar 07 14:03:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_form_field.php"
+Mar 07 14:03:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_form_actions.php"
+Mar 07 14:03:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_form_footer.php"
+Mar 07 14:03:11 symfony [info] {sfPHPView} Decorate content with "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:03:11 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:03:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 07 14:03:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 07 14:03:11 symfony [info] {sfWebDebugLogger} Configuration 1.14 ms (10)
+Mar 07 14:03:11 symfony [info] {sfWebDebugLogger} Factories 23.55 ms (1)
+Mar 07 14:03:11 symfony [info] {sfWebDebugLogger} Action "product/new" 24.42 ms (1)
+Mar 07 14:03:11 symfony [info] {sfWebDebugLogger} View "Success" for "product/new" 32.83 ms (1)
+Mar 07 14:03:11 symfony [info] {sfWebDebugLogger} Partial "product/_assets" 0.43 ms (1)
+Mar 07 14:03:11 symfony [info] {sfWebDebugLogger} Partial "product/_flashes" 0.42 ms (1)
+Mar 07 14:03:11 symfony [info] {sfWebDebugLogger} Partial "product/_form_header" 0.39 ms (1)
+Mar 07 14:03:11 symfony [info] {sfWebDebugLogger} Partial "product/_form" 23.38 ms (1)
+Mar 07 14:03:11 symfony [info] {sfWebDebugLogger} Partial "product/_form_fieldset" 20.16 ms (1)
+Mar 07 14:03:11 symfony [info] {sfWebDebugLogger} Partial "product/_form_field" 18.49 ms (5)
+Mar 07 14:03:11 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (2)
+Mar 07 14:03:11 symfony [info] {sfWebDebugLogger} Partial "product/_form_actions" 0.64 ms (1)
+Mar 07 14:03:11 symfony [info] {sfWebDebugLogger} Partial "product/_form_footer" 0.39 ms (1)
+Mar 07 14:03:11 symfony [info] {sfWebResponse} Send content (173693 o)
+Mar 07 14:03:12 symfony [info] {sfPatternRouting} Match route "product" (/product.:sf_format) for /product with parameters array (  'module' => 'product',  'action' => 'index',  'sf_format' => 'html',)
+Mar 07 14:03:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 07 14:03:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 07 14:03:12 symfony [info] {productActions} Call "productActions->executeIndex()"
+Mar 07 14:03:12 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 07 14:03:12 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM product p - ()
+Mar 07 14:03:12 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/indexSuccess.php"
+Mar 07 14:03:12 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_assets.php"
+Mar 07 14:03:12 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_flashes.php"
+Mar 07 14:03:12 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_header.php"
+Mar 07 14:03:12 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters.php"
+Mar 07 14:03:12 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:03:12 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_name AS p__category_name, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product_category p - ()
+Mar 07 14:03:12 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:03:12 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:03:12 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:03:12 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:03:12 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:03:12 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:03:12 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list.php"
+Mar 07 14:03:12 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_th_tabular.php"
+Mar 07 14:03:12 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:12 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:12 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:12 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:12 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:12 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:12 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:12 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:12 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:12 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:12 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:12 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:12 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:12 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:12 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:03:12 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:03:12 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_id AS p__category_id, p.product_name AS p__product_name, p.product_key AS p__product_key, p.unit_price AS p__unit_price, p.description AS p__description, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product p LIMIT 20 - ()
+Mar 07 14:03:12 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_batch_actions.php"
+Mar 07 14:03:12 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_tabular.php"
+Mar 07 14:03:12 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_actions.php"
+Mar 07 14:03:12 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_batch_actions.php"
+Mar 07 14:03:12 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_actions.php"
+Mar 07 14:03:12 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_footer.php"
+Mar 07 14:03:12 symfony [info] {sfPHPView} Decorate content with "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:03:12 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:03:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 07 14:03:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 07 14:03:12 symfony [info] {sfWebDebugLogger} Configuration 23.50 ms (12)
+Mar 07 14:03:12 symfony [info] {sfWebDebugLogger} Factories 17.79 ms (1)
+Mar 07 14:03:12 symfony [info] {sfWebDebugLogger} Action "product/index" 33.60 ms (1)
+Mar 07 14:03:12 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (4)
+Mar 07 14:03:12 symfony [info] {sfWebDebugLogger} View "Success" for "product/index" 82.84 ms (1)
+Mar 07 14:03:12 symfony [info] {sfWebDebugLogger} Partial "product/_assets" 0.53 ms (1)
+Mar 07 14:03:12 symfony [info] {sfWebDebugLogger} Partial "product/_flashes" 0.47 ms (1)
+Mar 07 14:03:12 symfony [info] {sfWebDebugLogger} Partial "product/_list_header" 0.39 ms (1)
+Mar 07 14:03:12 symfony [info] {sfWebDebugLogger} Partial "product/_filters" 27.61 ms (1)
+Mar 07 14:03:12 symfony [info] {sfWebDebugLogger} Partial "product/_filters_field" 22.98 ms (7)
+Mar 07 14:03:12 symfony [info] {sfWebDebugLogger} Partial "product/_list" 43.18 ms (1)
+Mar 07 14:03:12 symfony [info] {sfWebDebugLogger} Partial "product/_list_th_tabular" 29.15 ms (1)
+Mar 07 14:03:12 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_batch_actions" 0.61 ms (1)
+Mar 07 14:03:12 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_tabular" 8.17 ms (1)
+Mar 07 14:03:12 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_actions" 1.58 ms (1)
+Mar 07 14:03:12 symfony [info] {sfWebDebugLogger} Partial "product/_list_batch_actions" 0.82 ms (1)
+Mar 07 14:03:12 symfony [info] {sfWebDebugLogger} Partial "product/_list_actions" 0.50 ms (1)
+Mar 07 14:03:12 symfony [info] {sfWebDebugLogger} Partial "product/_list_footer" 0.40 ms (1)
+Mar 07 14:03:13 symfony [info] {sfWebResponse} Send content (307081 o)
+Mar 07 14:07:07 symfony [info] {sfPatternRouting} Match route "product" (/product.:sf_format) for /product with parameters array (  'module' => 'product',  'action' => 'index',  'sf_format' => 'html',)
+Mar 07 14:07:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 07 14:07:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 07 14:07:07 symfony [info] {productActions} Call "productActions->executeIndex()"
+Mar 07 14:07:07 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 07 14:07:07 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM product p - ()
+Mar 07 14:07:07 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/indexSuccess.php"
+Mar 07 14:07:07 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_assets.php"
+Mar 07 14:07:07 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_flashes.php"
+Mar 07 14:07:07 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_header.php"
+Mar 07 14:07:07 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters.php"
+Mar 07 14:07:07 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:07 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_name AS p__category_name, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product_category p - ()
+Mar 07 14:07:07 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:07 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:07 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:07 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:07 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:07 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:07 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list.php"
+Mar 07 14:07:07 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_th_tabular.php"
+Mar 07 14:07:07 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:07 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:07 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:07 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:07 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:07 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:07 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:07 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:07 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:07 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:07 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:07 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:07 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:07 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:07 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:07 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:07 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_id AS p__category_id, p.product_name AS p__product_name, p.product_key AS p__product_key, p.unit_price AS p__unit_price, p.description AS p__description, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product p LIMIT 20 - ()
+Mar 07 14:07:07 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_batch_actions.php"
+Mar 07 14:07:07 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_tabular.php"
+Mar 07 14:07:07 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_actions.php"
+Mar 07 14:07:07 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_batch_actions.php"
+Mar 07 14:07:07 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_actions.php"
+Mar 07 14:07:07 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_footer.php"
+Mar 07 14:07:07 symfony [info] {sfPHPView} Decorate content with "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:07:07 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:07:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 07 14:07:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 07 14:07:07 symfony [info] {sfWebDebugLogger} Configuration 23.30 ms (12)
+Mar 07 14:07:07 symfony [info] {sfWebDebugLogger} Factories 25.35 ms (1)
+Mar 07 14:07:07 symfony [info] {sfWebDebugLogger} Action "product/index" 37.29 ms (1)
+Mar 07 14:07:07 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (4)
+Mar 07 14:07:07 symfony [info] {sfWebDebugLogger} View "Success" for "product/index" 85.39 ms (1)
+Mar 07 14:07:07 symfony [info] {sfWebDebugLogger} Partial "product/_assets" 0.64 ms (1)
+Mar 07 14:07:07 symfony [info] {sfWebDebugLogger} Partial "product/_flashes" 0.63 ms (1)
+Mar 07 14:07:07 symfony [info] {sfWebDebugLogger} Partial "product/_list_header" 0.53 ms (1)
+Mar 07 14:07:07 symfony [info] {sfWebDebugLogger} Partial "product/_filters" 27.39 ms (1)
+Mar 07 14:07:07 symfony [info] {sfWebDebugLogger} Partial "product/_filters_field" 22.16 ms (7)
+Mar 07 14:07:07 symfony [info] {sfWebDebugLogger} Partial "product/_list" 42.96 ms (1)
+Mar 07 14:07:07 symfony [info] {sfWebDebugLogger} Partial "product/_list_th_tabular" 28.66 ms (1)
+Mar 07 14:07:07 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_batch_actions" 0.60 ms (1)
+Mar 07 14:07:07 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_tabular" 8.70 ms (1)
+Mar 07 14:07:07 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_actions" 1.45 ms (1)
+Mar 07 14:07:07 symfony [info] {sfWebDebugLogger} Partial "product/_list_batch_actions" 0.90 ms (1)
+Mar 07 14:07:07 symfony [info] {sfWebDebugLogger} Partial "product/_list_actions" 0.68 ms (1)
+Mar 07 14:07:07 symfony [info] {sfWebDebugLogger} Partial "product/_list_footer" 0.60 ms (1)
+Mar 07 14:07:07 symfony [info] {sfWebResponse} Send content (307087 o)
+Mar 07 14:07:09 symfony [info] {sfPatternRouting} Match route "customers" (/customers.:sf_format) for /customers with parameters array (  'module' => 'customers',  'action' => 'index',  'sf_format' => 'html',)
+Mar 07 14:07:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 07 14:07:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 07 14:07:09 symfony [info] {customersActions} Call "customersActions->executeIndex()"
+Mar 07 14:07:09 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 07 14:07:09 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM customer c - ()
+Mar 07 14:07:09 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/indexSuccess.php"
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_assets.php"
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_flashes.php"
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_header.php"
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters.php"
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list.php"
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_th_tabular.php"
+Mar 07 14:07:09 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:09 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:09 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:09 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:09 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:09 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:09 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:09 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:09 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:09 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:09 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:09 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:09 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:09 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:09 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:09 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:09 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:09 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:09 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.customer_name AS c__customer_name, c.customer_type AS c__customer_type, c.location AS c__location, c.contact_addr AS c__contact_addr, c.email AS c__email, c.phone_number AS c__phone_number, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM customer c LIMIT 20 - ()
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_batch_actions.php"
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_tabular.php"
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_actions.php"
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_batch_actions.php"
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_tabular.php"
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_actions.php"
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_batch_actions.php"
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_actions.php"
+Mar 07 14:07:09 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_footer.php"
+Mar 07 14:07:09 symfony [info] {sfPHPView} Decorate content with "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:07:09 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:07:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 07 14:07:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 07 14:07:09 symfony [info] {sfWebDebugLogger} Configuration 24.41 ms (12)
+Mar 07 14:07:09 symfony [info] {sfWebDebugLogger} Factories 23.76 ms (1)
+Mar 07 14:07:09 symfony [info] {sfWebDebugLogger} Action "customers/index" 35.46 ms (1)
+Mar 07 14:07:09 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 07 14:07:09 symfony [info] {sfWebDebugLogger} View "Success" for "customers/index" 94.08 ms (1)
+Mar 07 14:07:09 symfony [info] {sfWebDebugLogger} Partial "customers/_assets" 0.57 ms (1)
+Mar 07 14:07:09 symfony [info] {sfWebDebugLogger} Partial "customers/_flashes" 0.58 ms (1)
+Mar 07 14:07:09 symfony [info] {sfWebDebugLogger} Partial "customers/_list_header" 0.49 ms (1)
+Mar 07 14:07:09 symfony [info] {sfWebDebugLogger} Partial "customers/_filters" 23.00 ms (1)
+Mar 07 14:07:09 symfony [info] {sfWebDebugLogger} Partial "customers/_filters_field" 18.04 ms (8)
+Mar 07 14:07:09 symfony [info] {sfWebDebugLogger} Partial "customers/_list" 56.10 ms (1)
+Mar 07 14:07:09 symfony [info] {sfWebDebugLogger} Partial "customers/_list_th_tabular" 31.30 ms (1)
+Mar 07 14:07:09 symfony [info] {sfWebDebugLogger} Partial "customers/_list_td_batch_actions" 1.42 ms (2)
+Mar 07 14:07:09 symfony [info] {sfWebDebugLogger} Partial "customers/_list_td_tabular" 12.50 ms (2)
+Mar 07 14:07:09 symfony [info] {sfWebDebugLogger} Partial "customers/_list_td_actions" 3.55 ms (2)
+Mar 07 14:07:09 symfony [info] {sfWebDebugLogger} Partial "customers/_list_batch_actions" 0.97 ms (1)
+Mar 07 14:07:09 symfony [info] {sfWebDebugLogger} Partial "customers/_list_actions" 0.75 ms (1)
+Mar 07 14:07:09 symfony [info] {sfWebDebugLogger} Partial "customers/_list_footer" 0.55 ms (1)
+Mar 07 14:07:09 symfony [info] {sfWebResponse} Send content (330671 o)
+Mar 07 14:07:11 symfony [info] {sfPatternRouting} Match route "product_category" (/product_category.:sf_format) for /product_category with parameters array (  'module' => 'product_category',  'action' => 'index',  'sf_format' => 'html',)
+Mar 07 14:07:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 07 14:07:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 07 14:07:11 symfony [info] {product_categoryActions} Call "product_categoryActions->executeIndex()"
+Mar 07 14:07:11 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 07 14:07:11 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM product_category p - ()
+Mar 07 14:07:11 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/modules/product_category/templates/indexSuccess.php"
+Mar 07 14:07:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_assets.php"
+Mar 07 14:07:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_flashes.php"
+Mar 07 14:07:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_header.php"
+Mar 07 14:07:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_filters.php"
+Mar 07 14:07:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_filters_field.php"
+Mar 07 14:07:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_filters_field.php"
+Mar 07 14:07:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_filters_field.php"
+Mar 07 14:07:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list.php"
+Mar 07 14:07:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_th_tabular.php"
+Mar 07 14:07:11 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:11 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:11 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:11 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:11 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:11 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:11 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:11 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:11 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_name AS p__category_name, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product_category p LIMIT 20 - ()
+Mar 07 14:07:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_td_batch_actions.php"
+Mar 07 14:07:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_td_tabular.php"
+Mar 07 14:07:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_td_actions.php"
+Mar 07 14:07:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_batch_actions.php"
+Mar 07 14:07:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_actions.php"
+Mar 07 14:07:11 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_footer.php"
+Mar 07 14:07:11 symfony [info] {sfPHPView} Decorate content with "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:07:11 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:07:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 07 14:07:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 07 14:07:11 symfony [info] {sfWebDebugLogger} Configuration 22.83 ms (12)
+Mar 07 14:07:11 symfony [info] {sfWebDebugLogger} Factories 16.89 ms (1)
+Mar 07 14:07:11 symfony [info] {sfWebDebugLogger} Action "product_category/index" 29.78 ms (1)
+Mar 07 14:07:11 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 07 14:07:11 symfony [info] {sfWebDebugLogger} View "Success" for "product_category/index" 71.01 ms (1)
+Mar 07 14:07:11 symfony [info] {sfWebDebugLogger} Partial "product_category/_assets" 0.67 ms (1)
+Mar 07 14:07:11 symfony [info] {sfWebDebugLogger} Partial "product_category/_flashes" 0.55 ms (1)
+Mar 07 14:07:11 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_header" 0.46 ms (1)
+Mar 07 14:07:11 symfony [info] {sfWebDebugLogger} Partial "product_category/_filters" 15.65 ms (1)
+Mar 07 14:07:11 symfony [info] {sfWebDebugLogger} Partial "product_category/_filters_field" 12.33 ms (3)
+Mar 07 14:07:11 symfony [info] {sfWebDebugLogger} Partial "product_category/_list" 42.83 ms (1)
+Mar 07 14:07:11 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_th_tabular" 26.08 ms (1)
+Mar 07 14:07:11 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_td_batch_actions" 0.64 ms (1)
+Mar 07 14:07:11 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_td_tabular" 8.67 ms (1)
+Mar 07 14:07:11 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_td_actions" 1.48 ms (1)
+Mar 07 14:07:11 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_batch_actions" 0.78 ms (1)
+Mar 07 14:07:11 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_actions" 0.53 ms (1)
+Mar 07 14:07:11 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_footer" 0.41 ms (1)
+Mar 07 14:07:11 symfony [info] {sfWebResponse} Send content (216328 o)
+Mar 07 14:07:14 symfony [info] {sfPatternRouting} Match route "product" (/product.:sf_format) for /product with parameters array (  'module' => 'product',  'action' => 'index',  'sf_format' => 'html',)
+Mar 07 14:07:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 07 14:07:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 07 14:07:14 symfony [info] {productActions} Call "productActions->executeIndex()"
+Mar 07 14:07:14 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 07 14:07:14 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM product p - ()
+Mar 07 14:07:14 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/indexSuccess.php"
+Mar 07 14:07:14 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_assets.php"
+Mar 07 14:07:14 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_flashes.php"
+Mar 07 14:07:14 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_header.php"
+Mar 07 14:07:14 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters.php"
+Mar 07 14:07:14 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:14 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_name AS p__category_name, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product_category p - ()
+Mar 07 14:07:14 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:14 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:14 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:14 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:14 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:14 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:14 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list.php"
+Mar 07 14:07:14 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_th_tabular.php"
+Mar 07 14:07:14 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:14 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:14 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:14 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:14 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:14 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:14 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:14 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:14 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:14 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:14 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:14 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:14 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:14 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:14 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:14 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:14 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_id AS p__category_id, p.product_name AS p__product_name, p.product_key AS p__product_key, p.unit_price AS p__unit_price, p.description AS p__description, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product p LIMIT 20 - ()
+Mar 07 14:07:14 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_batch_actions.php"
+Mar 07 14:07:14 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_tabular.php"
+Mar 07 14:07:14 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_actions.php"
+Mar 07 14:07:14 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_batch_actions.php"
+Mar 07 14:07:14 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_actions.php"
+Mar 07 14:07:14 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_footer.php"
+Mar 07 14:07:14 symfony [info] {sfPHPView} Decorate content with "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:07:14 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:07:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 07 14:07:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 07 14:07:14 symfony [info] {sfWebDebugLogger} Configuration 23.36 ms (12)
+Mar 07 14:07:14 symfony [info] {sfWebDebugLogger} Factories 22.87 ms (1)
+Mar 07 14:07:14 symfony [info] {sfWebDebugLogger} Action "product/index" 32.32 ms (1)
+Mar 07 14:07:14 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (4)
+Mar 07 14:07:14 symfony [info] {sfWebDebugLogger} View "Success" for "product/index" 85.39 ms (1)
+Mar 07 14:07:14 symfony [info] {sfWebDebugLogger} Partial "product/_assets" 0.71 ms (1)
+Mar 07 14:07:14 symfony [info] {sfWebDebugLogger} Partial "product/_flashes" 0.70 ms (1)
+Mar 07 14:07:14 symfony [info] {sfWebDebugLogger} Partial "product/_list_header" 0.62 ms (1)
+Mar 07 14:07:14 symfony [info] {sfWebDebugLogger} Partial "product/_filters" 29.55 ms (1)
+Mar 07 14:07:14 symfony [info] {sfWebDebugLogger} Partial "product/_filters_field" 23.58 ms (7)
+Mar 07 14:07:14 symfony [info] {sfWebDebugLogger} Partial "product/_list" 41.98 ms (1)
+Mar 07 14:07:14 symfony [info] {sfWebDebugLogger} Partial "product/_list_th_tabular" 28.55 ms (1)
+Mar 07 14:07:14 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_batch_actions" 0.58 ms (1)
+Mar 07 14:07:14 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_tabular" 8.13 ms (1)
+Mar 07 14:07:14 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_actions" 1.41 ms (1)
+Mar 07 14:07:14 symfony [info] {sfWebDebugLogger} Partial "product/_list_batch_actions" 0.74 ms (1)
+Mar 07 14:07:14 symfony [info] {sfWebDebugLogger} Partial "product/_list_actions" 0.49 ms (1)
+Mar 07 14:07:14 symfony [info] {sfWebDebugLogger} Partial "product/_list_footer" 0.40 ms (1)
+Mar 07 14:07:14 symfony [info] {sfWebResponse} Send content (307087 o)
+Mar 07 14:07:17 symfony [info] {sfPatternRouting} Match route "purchase_order" (/purchase_order.:sf_format) for /purchase_order with parameters array (  'module' => 'purchase_orders',  'action' => 'index',  'sf_format' => 'html',)
+Mar 07 14:07:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 07 14:07:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 07 14:07:17 symfony [info] {purchase_ordersActions} Call "purchase_ordersActions->executeIndex()"
+Mar 07 14:07:17 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 07 14:07:17 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM purchase_order p - ()
+Mar 07 14:07:17 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/indexSuccess.php"
+Mar 07 14:07:17 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_assets.php"
+Mar 07 14:07:17 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_flashes.php"
+Mar 07 14:07:17 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list_header.php"
+Mar 07 14:07:17 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_filters.php"
+Mar 07 14:07:17 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_filters_field.php"
+Mar 07 14:07:17 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_id AS p__category_id, p.product_name AS p__product_name, p.product_key AS p__product_key, p.unit_price AS p__unit_price, p.description AS p__description, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product p - ()
+Mar 07 14:07:17 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_filters_field.php"
+Mar 07 14:07:17 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.customer_name AS c__customer_name, c.customer_type AS c__customer_type, c.location AS c__location, c.contact_addr AS c__contact_addr, c.email AS c__email, c.phone_number AS c__phone_number, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM customer c - ()
+Mar 07 14:07:17 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list.php"
+Mar 07 14:07:17 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list_th_tabular.php"
+Mar 07 14:07:17 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:17 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:17 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:17 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:17 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:17 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:17 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.product_id AS p__product_id, p.customer_id AS p__customer_id FROM purchase_order p LIMIT 20 - ()
+Mar 07 14:07:17 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list_td_tabular.php"
+Mar 07 14:07:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.category_id AS p__category_id, p.product_name AS p__product_name, p.product_key AS p__product_key, p.unit_price AS p__unit_price, p.description AS p__description, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product p WHERE (p.id = ?) - (1)
+Mar 07 14:07:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.customer_name AS c__customer_name, c.customer_type AS c__customer_type, c.location AS c__location, c.contact_addr AS c__contact_addr, c.email AS c__email, c.phone_number AS c__phone_number, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM customer c WHERE (c.id = ?) - (1)
+Mar 07 14:07:17 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list_td_actions.php"
+Mar 07 14:07:17 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list_td_tabular.php"
+Mar 07 14:07:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.category_id AS p__category_id, p.product_name AS p__product_name, p.product_key AS p__product_key, p.unit_price AS p__unit_price, p.description AS p__description, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product p WHERE (p.id = ?) - (1)
+Mar 07 14:07:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.customer_name AS c__customer_name, c.customer_type AS c__customer_type, c.location AS c__location, c.contact_addr AS c__contact_addr, c.email AS c__email, c.phone_number AS c__phone_number, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM customer c WHERE (c.id = ?) - (2)
+Mar 07 14:07:17 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list_td_actions.php"
+Mar 07 14:07:17 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/apps/product_management/modules/purchase_orders/templates/_list_batch_actions.php"
+Mar 07 14:07:17 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/apps/product_management/modules/purchase_orders/templates/_list_actions.php"
+Mar 07 14:07:17 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list_footer.php"
+Mar 07 14:07:17 symfony [info] {sfPHPView} Decorate content with "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:07:17 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:07:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 07 14:07:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 07 14:07:17 symfony [info] {sfWebDebugLogger} Configuration 23.05 ms (12)
+Mar 07 14:07:17 symfony [info] {sfWebDebugLogger} Factories 16.99 ms (1)
+Mar 07 14:07:17 symfony [info] {sfWebDebugLogger} Action "purchase_orders/index" 34.96 ms (1)
+Mar 07 14:07:17 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (9)
+Mar 07 14:07:17 symfony [info] {sfWebDebugLogger} View "Success" for "purchase_orders/index" 72.56 ms (1)
+Mar 07 14:07:17 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_assets" 0.55 ms (1)
+Mar 07 14:07:17 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_flashes" 0.53 ms (1)
+Mar 07 14:07:17 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list_header" 0.46 ms (1)
+Mar 07 14:07:17 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_filters" 14.76 ms (1)
+Mar 07 14:07:17 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_filters_field" 10.99 ms (2)
+Mar 07 14:07:17 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list" 44.87 ms (1)
+Mar 07 14:07:17 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list_th_tabular" 25.22 ms (1)
+Mar 07 14:07:17 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list_td_tabular" 13.74 ms (2)
+Mar 07 14:07:17 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list_td_actions" 2.64 ms (2)
+Mar 07 14:07:17 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list_batch_actions" 0.75 ms (1)
+Mar 07 14:07:17 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list_actions" 0.49 ms (1)
+Mar 07 14:07:17 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list_footer" 0.38 ms (1)
+Mar 07 14:07:17 symfony [info] {sfWebResponse} Send content (298246 o)
+Mar 07 14:07:27 symfony [info] {sfPatternRouting} Match route "product" (/product.:sf_format) for /product with parameters array (  'module' => 'product',  'action' => 'index',  'sf_format' => 'html',)
+Mar 07 14:07:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 07 14:07:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 07 14:07:27 symfony [info] {productActions} Call "productActions->executeIndex()"
+Mar 07 14:07:27 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 07 14:07:27 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM product p - ()
+Mar 07 14:07:27 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/indexSuccess.php"
+Mar 07 14:07:27 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_assets.php"
+Mar 07 14:07:27 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_flashes.php"
+Mar 07 14:07:27 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_header.php"
+Mar 07 14:07:27 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters.php"
+Mar 07 14:07:27 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:27 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_name AS p__category_name, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product_category p - ()
+Mar 07 14:07:27 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:27 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:27 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:27 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:27 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:27 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:27 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list.php"
+Mar 07 14:07:27 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_th_tabular.php"
+Mar 07 14:07:27 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:27 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:27 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:27 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:27 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:27 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:27 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:27 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:27 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:27 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:27 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:27 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:27 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:27 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:27 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:27 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:27 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_id AS p__category_id, p.product_name AS p__product_name, p.product_key AS p__product_key, p.unit_price AS p__unit_price, p.description AS p__description, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product p LIMIT 20 - ()
+Mar 07 14:07:27 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_batch_actions.php"
+Mar 07 14:07:27 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_tabular.php"
+Mar 07 14:07:27 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_actions.php"
+Mar 07 14:07:27 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_batch_actions.php"
+Mar 07 14:07:27 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_actions.php"
+Mar 07 14:07:27 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_footer.php"
+Mar 07 14:07:27 symfony [info] {sfPHPView} Decorate content with "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:07:27 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:07:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 07 14:07:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 07 14:07:27 symfony [info] {sfWebDebugLogger} Configuration 24.48 ms (12)
+Mar 07 14:07:27 symfony [info] {sfWebDebugLogger} Factories 24.89 ms (1)
+Mar 07 14:07:27 symfony [info] {sfWebDebugLogger} Action "product/index" 34.11 ms (1)
+Mar 07 14:07:27 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (4)
+Mar 07 14:07:27 symfony [info] {sfWebDebugLogger} View "Success" for "product/index" 87.69 ms (1)
+Mar 07 14:07:27 symfony [info] {sfWebDebugLogger} Partial "product/_assets" 0.45 ms (1)
+Mar 07 14:07:27 symfony [info] {sfWebDebugLogger} Partial "product/_flashes" 0.43 ms (1)
+Mar 07 14:07:27 symfony [info] {sfWebDebugLogger} Partial "product/_list_header" 0.39 ms (1)
+Mar 07 14:07:27 symfony [info] {sfWebDebugLogger} Partial "product/_filters" 32.38 ms (1)
+Mar 07 14:07:27 symfony [info] {sfWebDebugLogger} Partial "product/_filters_field" 26.64 ms (7)
+Mar 07 14:07:27 symfony [info] {sfWebDebugLogger} Partial "product/_list" 43.56 ms (1)
+Mar 07 14:07:27 symfony [info] {sfWebDebugLogger} Partial "product/_list_th_tabular" 29.88 ms (1)
+Mar 07 14:07:27 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_batch_actions" 0.54 ms (1)
+Mar 07 14:07:27 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_tabular" 8.24 ms (1)
+Mar 07 14:07:27 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_actions" 1.41 ms (1)
+Mar 07 14:07:27 symfony [info] {sfWebDebugLogger} Partial "product/_list_batch_actions" 0.75 ms (1)
+Mar 07 14:07:27 symfony [info] {sfWebDebugLogger} Partial "product/_list_actions" 0.52 ms (1)
+Mar 07 14:07:27 symfony [info] {sfWebDebugLogger} Partial "product/_list_footer" 0.41 ms (1)
+Mar 07 14:07:27 symfony [info] {sfWebResponse} Send content (307085 o)
+Mar 07 14:07:29 symfony [info] {sfPatternRouting} Match route "purchase_order" (/purchase_order.:sf_format) for /purchase_order with parameters array (  'module' => 'purchase_orders',  'action' => 'index',  'sf_format' => 'html',)
+Mar 07 14:07:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 07 14:07:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 07 14:07:29 symfony [info] {purchase_ordersActions} Call "purchase_ordersActions->executeIndex()"
+Mar 07 14:07:29 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 07 14:07:29 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM purchase_order p - ()
+Mar 07 14:07:29 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/indexSuccess.php"
+Mar 07 14:07:29 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_assets.php"
+Mar 07 14:07:29 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_flashes.php"
+Mar 07 14:07:29 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list_header.php"
+Mar 07 14:07:29 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_filters.php"
+Mar 07 14:07:29 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_filters_field.php"
+Mar 07 14:07:29 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_id AS p__category_id, p.product_name AS p__product_name, p.product_key AS p__product_key, p.unit_price AS p__unit_price, p.description AS p__description, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product p - ()
+Mar 07 14:07:29 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_filters_field.php"
+Mar 07 14:07:29 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.customer_name AS c__customer_name, c.customer_type AS c__customer_type, c.location AS c__location, c.contact_addr AS c__contact_addr, c.email AS c__email, c.phone_number AS c__phone_number, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM customer c - ()
+Mar 07 14:07:29 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list.php"
+Mar 07 14:07:29 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list_th_tabular.php"
+Mar 07 14:07:29 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:29 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:29 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:29 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:29 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:29 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:29 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.product_id AS p__product_id, p.customer_id AS p__customer_id FROM purchase_order p LIMIT 20 - ()
+Mar 07 14:07:29 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list_td_tabular.php"
+Mar 07 14:07:29 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.category_id AS p__category_id, p.product_name AS p__product_name, p.product_key AS p__product_key, p.unit_price AS p__unit_price, p.description AS p__description, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product p WHERE (p.id = ?) - (1)
+Mar 07 14:07:29 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.customer_name AS c__customer_name, c.customer_type AS c__customer_type, c.location AS c__location, c.contact_addr AS c__contact_addr, c.email AS c__email, c.phone_number AS c__phone_number, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM customer c WHERE (c.id = ?) - (1)
+Mar 07 14:07:29 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list_td_actions.php"
+Mar 07 14:07:29 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list_td_tabular.php"
+Mar 07 14:07:29 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.category_id AS p__category_id, p.product_name AS p__product_name, p.product_key AS p__product_key, p.unit_price AS p__unit_price, p.description AS p__description, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product p WHERE (p.id = ?) - (1)
+Mar 07 14:07:29 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.customer_name AS c__customer_name, c.customer_type AS c__customer_type, c.location AS c__location, c.contact_addr AS c__contact_addr, c.email AS c__email, c.phone_number AS c__phone_number, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM customer c WHERE (c.id = ?) - (2)
+Mar 07 14:07:29 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list_td_actions.php"
+Mar 07 14:07:29 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/apps/product_management/modules/purchase_orders/templates/_list_batch_actions.php"
+Mar 07 14:07:29 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/apps/product_management/modules/purchase_orders/templates/_list_actions.php"
+Mar 07 14:07:29 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoPurchase_orders/templates/_list_footer.php"
+Mar 07 14:07:29 symfony [info] {sfPHPView} Decorate content with "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:07:29 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:07:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 07 14:07:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 07 14:07:29 symfony [info] {sfWebDebugLogger} Configuration 24.18 ms (12)
+Mar 07 14:07:29 symfony [info] {sfWebDebugLogger} Factories 17.92 ms (1)
+Mar 07 14:07:29 symfony [info] {sfWebDebugLogger} Action "purchase_orders/index" 37.08 ms (1)
+Mar 07 14:07:29 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (9)
+Mar 07 14:07:29 symfony [info] {sfWebDebugLogger} View "Success" for "purchase_orders/index" 71.91 ms (1)
+Mar 07 14:07:29 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_assets" 0.46 ms (1)
+Mar 07 14:07:29 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_flashes" 0.43 ms (1)
+Mar 07 14:07:29 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list_header" 0.38 ms (1)
+Mar 07 14:07:29 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_filters" 12.53 ms (1)
+Mar 07 14:07:29 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_filters_field" 9.42 ms (2)
+Mar 07 14:07:29 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list" 47.00 ms (1)
+Mar 07 14:07:29 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list_th_tabular" 26.25 ms (1)
+Mar 07 14:07:29 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list_td_tabular" 14.46 ms (2)
+Mar 07 14:07:29 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list_td_actions" 2.75 ms (2)
+Mar 07 14:07:29 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list_batch_actions" 0.76 ms (1)
+Mar 07 14:07:29 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list_actions" 0.51 ms (1)
+Mar 07 14:07:29 symfony [info] {sfWebDebugLogger} Partial "purchase_orders/_list_footer" 0.40 ms (1)
+Mar 07 14:07:29 symfony [info] {sfWebResponse} Send content (298245 o)
+Mar 07 14:07:31 symfony [info] {sfPatternRouting} Match route "product" (/product.:sf_format) for /product with parameters array (  'module' => 'product',  'action' => 'index',  'sf_format' => 'html',)
+Mar 07 14:07:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 07 14:07:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 07 14:07:31 symfony [info] {productActions} Call "productActions->executeIndex()"
+Mar 07 14:07:31 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 07 14:07:31 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM product p - ()
+Mar 07 14:07:31 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/indexSuccess.php"
+Mar 07 14:07:31 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_assets.php"
+Mar 07 14:07:31 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_flashes.php"
+Mar 07 14:07:31 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_header.php"
+Mar 07 14:07:31 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters.php"
+Mar 07 14:07:31 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:31 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_name AS p__category_name, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product_category p - ()
+Mar 07 14:07:31 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:31 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:31 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:31 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:31 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:31 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:07:31 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list.php"
+Mar 07 14:07:31 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_th_tabular.php"
+Mar 07 14:07:31 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:31 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:31 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:31 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:31 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:31 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:31 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:31 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:31 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:31 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:31 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:31 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:31 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:31 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:31 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:07:31 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:07:31 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_id AS p__category_id, p.product_name AS p__product_name, p.product_key AS p__product_key, p.unit_price AS p__unit_price, p.description AS p__description, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product p LIMIT 20 - ()
+Mar 07 14:07:31 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_batch_actions.php"
+Mar 07 14:07:31 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_tabular.php"
+Mar 07 14:07:31 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_actions.php"
+Mar 07 14:07:31 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_batch_actions.php"
+Mar 07 14:07:31 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_actions.php"
+Mar 07 14:07:31 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_footer.php"
+Mar 07 14:07:31 symfony [info] {sfPHPView} Decorate content with "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:07:31 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:07:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 07 14:07:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 07 14:07:31 symfony [info] {sfWebDebugLogger} Configuration 24.73 ms (12)
+Mar 07 14:07:31 symfony [info] {sfWebDebugLogger} Factories 17.76 ms (1)
+Mar 07 14:07:31 symfony [info] {sfWebDebugLogger} Action "product/index" 34.23 ms (1)
+Mar 07 14:07:31 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (4)
+Mar 07 14:07:31 symfony [info] {sfWebDebugLogger} View "Success" for "product/index" 89.25 ms (1)
+Mar 07 14:07:31 symfony [info] {sfWebDebugLogger} Partial "product/_assets" 0.51 ms (1)
+Mar 07 14:07:31 symfony [info] {sfWebDebugLogger} Partial "product/_flashes" 0.50 ms (1)
+Mar 07 14:07:31 symfony [info] {sfWebDebugLogger} Partial "product/_list_header" 0.40 ms (1)
+Mar 07 14:07:31 symfony [info] {sfWebDebugLogger} Partial "product/_filters" 32.59 ms (1)
+Mar 07 14:07:31 symfony [info] {sfWebDebugLogger} Partial "product/_filters_field" 27.87 ms (7)
+Mar 07 14:07:31 symfony [info] {sfWebDebugLogger} Partial "product/_list" 44.11 ms (1)
+Mar 07 14:07:31 symfony [info] {sfWebDebugLogger} Partial "product/_list_th_tabular" 30.25 ms (1)
+Mar 07 14:07:31 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_batch_actions" 0.54 ms (1)
+Mar 07 14:07:31 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_tabular" 8.10 ms (1)
+Mar 07 14:07:31 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_actions" 1.39 ms (1)
+Mar 07 14:07:31 symfony [info] {sfWebDebugLogger} Partial "product/_list_batch_actions" 0.75 ms (1)
+Mar 07 14:07:31 symfony [info] {sfWebDebugLogger} Partial "product/_list_actions" 0.52 ms (1)
+Mar 07 14:07:31 symfony [info] {sfWebDebugLogger} Partial "product/_list_footer" 0.41 ms (1)
+Mar 07 14:07:31 symfony [info] {sfWebResponse} Send content (307084 o)
+Mar 07 14:08:42 symfony [info] {sfPatternRouting} Match route "customers" (/customers.:sf_format) for /customers with parameters array (  'module' => 'customers',  'action' => 'index',  'sf_format' => 'html',)
+Mar 07 14:08:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 07 14:08:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 07 14:08:42 symfony [info] {customersActions} Call "customersActions->executeIndex()"
+Mar 07 14:08:42 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 07 14:08:42 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM customer c - ()
+Mar 07 14:08:42 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/indexSuccess.php"
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_assets.php"
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_flashes.php"
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_header.php"
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters.php"
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list.php"
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_th_tabular.php"
+Mar 07 14:08:42 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:42 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:42 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:42 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:42 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:42 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:42 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:42 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:42 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:42 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:42 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:42 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:42 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:42 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:42 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:42 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:42 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:42 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:42 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.customer_name AS c__customer_name, c.customer_type AS c__customer_type, c.location AS c__location, c.contact_addr AS c__contact_addr, c.email AS c__email, c.phone_number AS c__phone_number, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM customer c LIMIT 20 - ()
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_batch_actions.php"
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_tabular.php"
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_actions.php"
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_batch_actions.php"
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_tabular.php"
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_actions.php"
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_batch_actions.php"
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_actions.php"
+Mar 07 14:08:42 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_footer.php"
+Mar 07 14:08:42 symfony [info] {sfPHPView} Decorate content with "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:08:42 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:08:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 07 14:08:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 07 14:08:42 symfony [info] {sfWebDebugLogger} Configuration 23.49 ms (12)
+Mar 07 14:08:42 symfony [info] {sfWebDebugLogger} Factories 23.30 ms (1)
+Mar 07 14:08:42 symfony [info] {sfWebDebugLogger} Action "customers/index" 30.70 ms (1)
+Mar 07 14:08:42 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 07 14:08:42 symfony [info] {sfWebDebugLogger} View "Success" for "customers/index" 93.70 ms (1)
+Mar 07 14:08:42 symfony [info] {sfWebDebugLogger} Partial "customers/_assets" 0.46 ms (1)
+Mar 07 14:08:42 symfony [info] {sfWebDebugLogger} Partial "customers/_flashes" 0.42 ms (1)
+Mar 07 14:08:42 symfony [info] {sfWebDebugLogger} Partial "customers/_list_header" 0.37 ms (1)
+Mar 07 14:08:42 symfony [info] {sfWebDebugLogger} Partial "customers/_filters" 25.55 ms (1)
+Mar 07 14:08:42 symfony [info] {sfWebDebugLogger} Partial "customers/_filters_field" 21.16 ms (8)
+Mar 07 14:08:42 symfony [info] {sfWebDebugLogger} Partial "customers/_list" 55.63 ms (1)
+Mar 07 14:08:42 symfony [info] {sfWebDebugLogger} Partial "customers/_list_th_tabular" 29.52 ms (1)
+Mar 07 14:08:42 symfony [info] {sfWebDebugLogger} Partial "customers/_list_td_batch_actions" 1.29 ms (2)
+Mar 07 14:08:42 symfony [info] {sfWebDebugLogger} Partial "customers/_list_td_tabular" 13.71 ms (2)
+Mar 07 14:08:42 symfony [info] {sfWebDebugLogger} Partial "customers/_list_td_actions" 3.90 ms (2)
+Mar 07 14:08:42 symfony [info] {sfWebDebugLogger} Partial "customers/_list_batch_actions" 0.88 ms (1)
+Mar 07 14:08:42 symfony [info] {sfWebDebugLogger} Partial "customers/_list_actions" 0.61 ms (1)
+Mar 07 14:08:42 symfony [info] {sfWebDebugLogger} Partial "customers/_list_footer" 0.47 ms (1)
+Mar 07 14:08:42 symfony [info] {sfWebResponse} Send content (330672 o)
+Mar 07 14:08:52 symfony [info] {sfPatternRouting} Match route "product_category" (/product_category.:sf_format) for /product_category with parameters array (  'module' => 'product_category',  'action' => 'index',  'sf_format' => 'html',)
+Mar 07 14:08:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 07 14:08:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 07 14:08:52 symfony [info] {product_categoryActions} Call "product_categoryActions->executeIndex()"
+Mar 07 14:08:52 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 07 14:08:52 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM product_category p - ()
+Mar 07 14:08:52 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/modules/product_category/templates/indexSuccess.php"
+Mar 07 14:08:52 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_assets.php"
+Mar 07 14:08:52 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_flashes.php"
+Mar 07 14:08:52 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_header.php"
+Mar 07 14:08:52 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_filters.php"
+Mar 07 14:08:52 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_filters_field.php"
+Mar 07 14:08:52 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_filters_field.php"
+Mar 07 14:08:52 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_filters_field.php"
+Mar 07 14:08:52 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list.php"
+Mar 07 14:08:52 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_th_tabular.php"
+Mar 07 14:08:52 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:52 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:52 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:52 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:52 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:52 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:52 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:52 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:52 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_name AS p__category_name, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product_category p LIMIT 20 - ()
+Mar 07 14:08:52 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_td_batch_actions.php"
+Mar 07 14:08:52 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_td_tabular.php"
+Mar 07 14:08:52 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_td_actions.php"
+Mar 07 14:08:52 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_batch_actions.php"
+Mar 07 14:08:52 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_actions.php"
+Mar 07 14:08:52 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct_category/templates/_list_footer.php"
+Mar 07 14:08:52 symfony [info] {sfPHPView} Decorate content with "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:08:52 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:08:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 07 14:08:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 07 14:08:52 symfony [info] {sfWebDebugLogger} Configuration 23.80 ms (12)
+Mar 07 14:08:52 symfony [info] {sfWebDebugLogger} Factories 19.87 ms (1)
+Mar 07 14:08:52 symfony [info] {sfWebDebugLogger} Action "product_category/index" 42.98 ms (1)
+Mar 07 14:08:52 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 07 14:08:52 symfony [info] {sfWebDebugLogger} View "Success" for "product_category/index" 79.08 ms (1)
+Mar 07 14:08:52 symfony [info] {sfWebDebugLogger} Partial "product_category/_assets" 0.65 ms (1)
+Mar 07 14:08:52 symfony [info] {sfWebDebugLogger} Partial "product_category/_flashes" 0.59 ms (1)
+Mar 07 14:08:52 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_header" 0.60 ms (1)
+Mar 07 14:08:52 symfony [info] {sfWebDebugLogger} Partial "product_category/_filters" 15.51 ms (1)
+Mar 07 14:08:52 symfony [info] {sfWebDebugLogger} Partial "product_category/_filters_field" 12.15 ms (3)
+Mar 07 14:08:52 symfony [info] {sfWebDebugLogger} Partial "product_category/_list" 47.98 ms (1)
+Mar 07 14:08:52 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_th_tabular" 26.79 ms (1)
+Mar 07 14:08:52 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_td_batch_actions" 0.64 ms (1)
+Mar 07 14:08:52 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_td_tabular" 12.75 ms (1)
+Mar 07 14:08:52 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_td_actions" 1.73 ms (1)
+Mar 07 14:08:52 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_batch_actions" 1.05 ms (1)
+Mar 07 14:08:52 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_actions" 0.64 ms (1)
+Mar 07 14:08:52 symfony [info] {sfWebDebugLogger} Partial "product_category/_list_footer" 0.47 ms (1)
+Mar 07 14:08:52 symfony [info] {sfWebResponse} Send content (216329 o)
+Mar 07 14:08:54 symfony [info] {sfPatternRouting} Match route "product" (/product.:sf_format) for /product with parameters array (  'module' => 'product',  'action' => 'index',  'sf_format' => 'html',)
+Mar 07 14:08:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 07 14:08:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 07 14:08:54 symfony [info] {productActions} Call "productActions->executeIndex()"
+Mar 07 14:08:54 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 07 14:08:54 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM product p - ()
+Mar 07 14:08:54 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/indexSuccess.php"
+Mar 07 14:08:54 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_assets.php"
+Mar 07 14:08:54 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_flashes.php"
+Mar 07 14:08:54 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_header.php"
+Mar 07 14:08:54 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters.php"
+Mar 07 14:08:54 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:08:54 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_name AS p__category_name, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product_category p - ()
+Mar 07 14:08:54 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:08:54 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:08:54 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:08:54 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:08:54 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:08:54 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:08:54 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list.php"
+Mar 07 14:08:54 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_th_tabular.php"
+Mar 07 14:08:54 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:54 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:54 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:54 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:54 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:54 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:54 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:54 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:54 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:54 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:54 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:54 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:54 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:54 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:54 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:54 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:54 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_id AS p__category_id, p.product_name AS p__product_name, p.product_key AS p__product_key, p.unit_price AS p__unit_price, p.description AS p__description, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product p LIMIT 20 - ()
+Mar 07 14:08:54 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_batch_actions.php"
+Mar 07 14:08:54 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_tabular.php"
+Mar 07 14:08:54 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_actions.php"
+Mar 07 14:08:54 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_batch_actions.php"
+Mar 07 14:08:54 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_actions.php"
+Mar 07 14:08:54 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_footer.php"
+Mar 07 14:08:54 symfony [info] {sfPHPView} Decorate content with "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:08:54 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:08:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 07 14:08:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 07 14:08:54 symfony [info] {sfWebDebugLogger} Configuration 24.81 ms (12)
+Mar 07 14:08:54 symfony [info] {sfWebDebugLogger} Factories 18.84 ms (1)
+Mar 07 14:08:54 symfony [info] {sfWebDebugLogger} Action "product/index" 36.30 ms (1)
+Mar 07 14:08:54 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (4)
+Mar 07 14:08:54 symfony [info] {sfWebDebugLogger} View "Success" for "product/index" 84.53 ms (1)
+Mar 07 14:08:54 symfony [info] {sfWebDebugLogger} Partial "product/_assets" 0.48 ms (1)
+Mar 07 14:08:54 symfony [info] {sfWebDebugLogger} Partial "product/_flashes" 0.43 ms (1)
+Mar 07 14:08:54 symfony [info] {sfWebDebugLogger} Partial "product/_list_header" 0.37 ms (1)
+Mar 07 14:08:54 symfony [info] {sfWebDebugLogger} Partial "product/_filters" 27.24 ms (1)
+Mar 07 14:08:54 symfony [info] {sfWebDebugLogger} Partial "product/_filters_field" 22.99 ms (7)
+Mar 07 14:08:54 symfony [info] {sfWebDebugLogger} Partial "product/_list" 45.64 ms (1)
+Mar 07 14:08:54 symfony [info] {sfWebDebugLogger} Partial "product/_list_th_tabular" 30.75 ms (1)
+Mar 07 14:08:54 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_batch_actions" 0.62 ms (1)
+Mar 07 14:08:54 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_tabular" 9.06 ms (1)
+Mar 07 14:08:54 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_actions" 1.51 ms (1)
+Mar 07 14:08:54 symfony [info] {sfWebDebugLogger} Partial "product/_list_batch_actions" 0.80 ms (1)
+Mar 07 14:08:54 symfony [info] {sfWebDebugLogger} Partial "product/_list_actions" 0.51 ms (1)
+Mar 07 14:08:54 symfony [info] {sfWebDebugLogger} Partial "product/_list_footer" 0.40 ms (1)
+Mar 07 14:08:54 symfony [info] {sfWebResponse} Send content (307086 o)
+Mar 07 14:08:56 symfony [info] {sfPatternRouting} Match route "customers" (/customers.:sf_format) for /customers with parameters array (  'module' => 'customers',  'action' => 'index',  'sf_format' => 'html',)
+Mar 07 14:08:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 07 14:08:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 07 14:08:56 symfony [info] {customersActions} Call "customersActions->executeIndex()"
+Mar 07 14:08:56 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 07 14:08:56 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM customer c - ()
+Mar 07 14:08:56 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/indexSuccess.php"
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_assets.php"
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_flashes.php"
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_header.php"
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters.php"
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_filters_field.php"
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list.php"
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_th_tabular.php"
+Mar 07 14:08:56 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:56 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:56 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:56 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:56 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:56 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:56 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:56 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:56 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:56 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:56 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:56 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:56 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:56 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:56 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:56 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:56 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:08:56 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:08:56 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.customer_name AS c__customer_name, c.customer_type AS c__customer_type, c.location AS c__location, c.contact_addr AS c__contact_addr, c.email AS c__email, c.phone_number AS c__phone_number, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM customer c LIMIT 20 - ()
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_batch_actions.php"
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_tabular.php"
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_actions.php"
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_batch_actions.php"
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_tabular.php"
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_td_actions.php"
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_batch_actions.php"
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_actions.php"
+Mar 07 14:08:56 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoCustomers/templates/_list_footer.php"
+Mar 07 14:08:56 symfony [info] {sfPHPView} Decorate content with "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:08:56 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:08:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 07 14:08:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 07 14:08:56 symfony [info] {sfWebDebugLogger} Configuration 22.80 ms (12)
+Mar 07 14:08:56 symfony [info] {sfWebDebugLogger} Factories 21.65 ms (1)
+Mar 07 14:08:56 symfony [info] {sfWebDebugLogger} Action "customers/index" 30.68 ms (1)
+Mar 07 14:08:56 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Mar 07 14:08:56 symfony [info] {sfWebDebugLogger} View "Success" for "customers/index" 87.59 ms (1)
+Mar 07 14:08:56 symfony [info] {sfWebDebugLogger} Partial "customers/_assets" 0.43 ms (1)
+Mar 07 14:08:56 symfony [info] {sfWebDebugLogger} Partial "customers/_flashes" 0.46 ms (1)
+Mar 07 14:08:56 symfony [info] {sfWebDebugLogger} Partial "customers/_list_header" 0.61 ms (1)
+Mar 07 14:08:56 symfony [info] {sfWebDebugLogger} Partial "customers/_filters" 25.91 ms (1)
+Mar 07 14:08:56 symfony [info] {sfWebDebugLogger} Partial "customers/_filters_field" 19.96 ms (8)
+Mar 07 14:08:56 symfony [info] {sfWebDebugLogger} Partial "customers/_list" 49.76 ms (1)
+Mar 07 14:08:56 symfony [info] {sfWebDebugLogger} Partial "customers/_list_th_tabular" 28.77 ms (1)
+Mar 07 14:08:56 symfony [info] {sfWebDebugLogger} Partial "customers/_list_td_batch_actions" 1.13 ms (2)
+Mar 07 14:08:56 symfony [info] {sfWebDebugLogger} Partial "customers/_list_td_tabular" 10.84 ms (2)
+Mar 07 14:08:56 symfony [info] {sfWebDebugLogger} Partial "customers/_list_td_actions" 2.59 ms (2)
+Mar 07 14:08:56 symfony [info] {sfWebDebugLogger} Partial "customers/_list_batch_actions" 0.71 ms (1)
+Mar 07 14:08:56 symfony [info] {sfWebDebugLogger} Partial "customers/_list_actions" 0.53 ms (1)
+Mar 07 14:08:56 symfony [info] {sfWebDebugLogger} Partial "customers/_list_footer" 0.44 ms (1)
+Mar 07 14:08:56 symfony [info] {sfWebResponse} Send content (330671 o)
+Mar 07 14:09:00 symfony [info] {sfPatternRouting} Match route "product" (/product.:sf_format) for /product with parameters array (  'module' => 'product',  'action' => 'index',  'sf_format' => 'html',)
+Mar 07 14:09:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Mar 07 14:09:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Mar 07 14:09:00 symfony [info] {productActions} Call "productActions->executeIndex()"
+Mar 07 14:09:00 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Mar 07 14:09:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM product p - ()
+Mar 07 14:09:00 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/indexSuccess.php"
+Mar 07 14:09:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_assets.php"
+Mar 07 14:09:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_flashes.php"
+Mar 07 14:09:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_header.php"
+Mar 07 14:09:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters.php"
+Mar 07 14:09:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:09:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_name AS p__category_name, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product_category p - ()
+Mar 07 14:09:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:09:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:09:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:09:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:09:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:09:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_filters_field.php"
+Mar 07 14:09:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list.php"
+Mar 07 14:09:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_th_tabular.php"
+Mar 07 14:09:00 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:09:00 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:09:00 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:09:00 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:09:00 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:09:00 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:09:00 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:09:00 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:09:00 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:09:00 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:09:00 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:09:00 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:09:00 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:09:00 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:09:00 symfony [info] {main} Set slot "sf_admin.current_header"
+Mar 07 14:09:00 symfony [info] {main} Get slot "sf_admin.current_header"
+Mar 07 14:09:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.category_id AS p__category_id, p.product_name AS p__product_name, p.product_key AS p__product_key, p.unit_price AS p__unit_price, p.description AS p__description, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM product p LIMIT 20 - ()
+Mar 07 14:09:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_batch_actions.php"
+Mar 07 14:09:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_tabular.php"
+Mar 07 14:09:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_td_actions.php"
+Mar 07 14:09:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_batch_actions.php"
+Mar 07 14:09:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_actions.php"
+Mar 07 14:09:00 symfony [info] {sfPartialView} Render "/home/saranya/projects/products/cache/product_management/dev/modules/autoProduct/templates/_list_footer.php"
+Mar 07 14:09:00 symfony [info] {sfPHPView} Decorate content with "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:09:00 symfony [info] {sfPHPView} Render "/home/saranya/projects/products/apps/product_management/templates/layout.php"
+Mar 07 14:09:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Mar 07 14:09:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Mar 07 14:09:00 symfony [info] {sfWebDebugLogger} Configuration 24.18 ms (12)
+Mar 07 14:09:00 symfony [info] {sfWebDebugLogger} Factories 23.89 ms (1)
+Mar 07 14:09:00 symfony [info] {sfWebDebugLogger} Action "product/index" 33.21 ms (1)
+Mar 07 14:09:00 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (4)
+Mar 07 14:09:00 symfony [info] {sfWebDebugLogger} View "Success" for "product/index" 96.89 ms (1)
+Mar 07 14:09:00 symfony [info] {sfWebDebugLogger} Partial "product/_assets" 0.51 ms (1)
+Mar 07 14:09:00 symfony [info] {sfWebDebugLogger} Partial "product/_flashes" 0.45 ms (1)
+Mar 07 14:09:00 symfony [info] {sfWebDebugLogger} Partial "product/_list_header" 0.39 ms (1)
+Mar 07 14:09:00 symfony [info] {sfWebDebugLogger} Partial "product/_filters" 32.07 ms (1)
+Mar 07 14:09:00 symfony [info] {sfWebDebugLogger} Partial "product/_filters_field" 27.20 ms (7)
+Mar 07 14:09:00 symfony [info] {sfWebDebugLogger} Partial "product/_list" 52.09 ms (1)
+Mar 07 14:09:00 symfony [info] {sfWebDebugLogger} Partial "product/_list_th_tabular" 33.11 ms (1)
+Mar 07 14:09:00 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_batch_actions" 0.88 ms (1)
+Mar 07 14:09:00 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_tabular" 11.15 ms (1)
+Mar 07 14:09:00 symfony [info] {sfWebDebugLogger} Partial "product/_list_td_actions" 1.79 ms (1)
+Mar 07 14:09:00 symfony [info] {sfWebDebugLogger} Partial "product/_list_batch_actions" 1.00 ms (1)
+Mar 07 14:09:00 symfony [info] {sfWebDebugLogger} Partial "product/_list_actions" 0.71 ms (1)
+Mar 07 14:09:00 symfony [info] {sfWebDebugLogger} Partial "product/_list_footer" 0.53 ms (1)
+Mar 07 14:09:00 symfony [info] {sfWebResponse} Send content (307081 o)
